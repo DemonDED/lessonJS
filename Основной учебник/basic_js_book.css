@@ -1,0 +1,60 @@
+html, body {
+  height: 100%;
+}
+body {
+  font: 0.9rem/3 Arial;
+}
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+  background-color: rgb(250, 239, 225);
+}
+a {
+  display: block;
+  box-sizing: border-box;
+  text-decoration: none;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  padding: 2px 5px;
+  transition: all 0.5s linear;
+  width: 200px;
+  text-align: center;
+}
+.easy a:hover {
+  transform: translateX(15px);
+  box-shadow: 1px 1px 5px rgb(0, 194, 0);
+}
+.hard a:hover {
+  transform: translateX(15px);
+  box-shadow: 1px 1px 5px red;
+}
+.easy > li {
+  color: rgb(0, 194, 0);
+}
+.hard > li {
+  color: red;
+}
+#content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+header, footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 11%;
+  background: linear-gradient(to bottom, rgb(255, 201, 52), rgb(226, 169, 11));
+}
+footer {
+  position: absolute;
+  bottom: 0;
+}
