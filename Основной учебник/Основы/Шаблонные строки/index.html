@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../Переменные/style.css">
+  <title>Шаблонные строки</title>
+</head>
+<body>
+  <div id="wrapper">
+    <header>
+      <img src="" alt="">
+      <h1></h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Шаблонные строки</h2>
+          <p>
+            Существует специальный тип кавычек - косые.
+          </p>
+          <p>
+            В косых кавычках можно выполнять вставку переменных. Для этого имя переменной нужно написать в конструкции ${}.
+          </p>
+          <p>
+            let str = 'xxx';
+            <br>
+            let txt = `aaa ${str} bbb`;
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 1:</span> Перепишите следующий код через вставку переменных: <br>
+              let str1 = 'xxx';
+              <br>
+              let str2 = 'yyy';
+              <br>
+              let txt  = 'aaa ' + str1 + ' bbb ' + str2 + ' ccc';
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Многострочность</h2>
+          <p>
+            В JavaScript строках, созданных через одинарные или двойные кавычки, не допустим перенос строки.
+          </p>
+          <p>
+            А вот косые кавычки специально предназначены для создания многострочных строк: 
+          </p>
+          <p>
+            let str = `abc
+            <br>
+            def`; // так будет работать
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 2:</span> Запишите в переменную str строку, состоящую из символов 'a', 'b', 'c', причем после каждого символа, кроме последнего, должен стоять перенос строки.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./template_string.js"></script>

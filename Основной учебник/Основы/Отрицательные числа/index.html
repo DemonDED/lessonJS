@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../Переменные/style.css">
+  <title>Отрицательные числа</title>
+</head>
+<body>
+  <div id="wrapper">
+    <header>
+      <img id="logo" src="../../../assets/logoJS.png" alt="JS">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Отрицательные числа</h2>
+          <p>
+            Числа могут быть отрицательными. Для этого перед числом необходимо поставить знак минус:
+          </p>
+          <p>
+            let a = -1;
+            <br>
+            alert(a); // выведет -1
+          </p>
+          <p>
+            Знак минус можно писать как к числам, так и к переменным: 
+          </p>
+          <p>
+            let a = 1;
+            <br>
+            let b = -a; // записали в b содержимое a с обратным знаком
+            <br>
+            alert(b);   // выведет -1
+          </p>
+        </div>
+        <div>
+          <h2>Плюс перед переменными</h2>
+          <p>
+            Подобно тому, как перед отрицательными числами ставится знак "минус", перед положительными числами можно ставить знак "плюс". 
+          </p>
+          <p>
+            let a = +1;
+            <br>
+            alert(a); // выведет 1
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 1:</span>  Создайте переменную a со значением -100. Выведите это значение на экран.
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span> Создайте переменную a, запишите в нее какое-нибудь положительное или отрицательное число. Выведите на экран это число с обратным знаком. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./negative_num.js"></script>

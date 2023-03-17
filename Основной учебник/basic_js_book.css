@@ -9,8 +9,8 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  box-sizing: border-box;
   width: 100%;
-  height: 80%;
   background-color: rgb(250, 239, 225);
 }
 a {
@@ -22,7 +22,7 @@ a {
   color: black;
   padding: 2px 5px;
   transition: all 0.5s linear;
-  width: 200px;
+  width: 300px;
   text-align: center;
 }
 .easy a:hover {
@@ -35,6 +35,10 @@ a {
 }
 .easy > li {
   color: rgb(0, 194, 0);
+  margin-bottom: 10px;
+}
+.medium > li {
+  color: yellow;
 }
 .hard > li {
   color: red;
@@ -42,7 +46,8 @@ a {
 #content {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
+  box-sizing: border-box;
   width: 100%;
 }
 header, footer {
@@ -51,10 +56,9 @@ header, footer {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: 11%;
+  height: 10%;
   background: linear-gradient(to bottom, rgb(255, 201, 52), rgb(226, 169, 11));
 }
 footer {
-  position: absolute;
   bottom: 0;
 }
