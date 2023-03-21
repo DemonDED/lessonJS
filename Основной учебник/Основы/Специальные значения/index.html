@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../Переменные/style.css">
+  <title>Специальные значения</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Специальные значения</h2>
+          <p>В JavaScript, как и в других языках программирования, существуют ключевые слова для некоторых специальных значений. Вот они: undefined, null, true, false, NaN, Infinity, -Infinity.</p>
+        </div>
+        <div>
+          <h2>Значение undefined</h2>
+          <p>
+            Значение undefined обозначает неопределенность. Такое значение будет у переменной, если мы объявили ее, но не записали в нее значение: 
+          </p>
+          <p>
+            let a;
+            <br>
+            alert(a); // выведет undefined
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 1:</span>  Объявите переменную, не задавая ей значения. Выведите значение созданной переменной на экран.
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Значение null</h2>
+          <p>
+            Значение null обозначает "ничего". К примеру, мы можем присвоить переменной такое значение в знак того, что там ничего не лежит:
+          </p>
+          <p>
+            let a = null;
+            <br>
+            alert(a); // выведет null
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 2:</span> Присвойте переменной значение null. Выведите эту переменную на экран.
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Значения true и false</h2>
+          <p>
+            Значения true и false обозначают истину и ложь соответственно. Они используются для таких вещей, которые предполагают два варианта ответа - да или нет.
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span> Присвойте переменной значение true. Выведите эту переменную на экран. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 4:</span> Присвойте переменной значение false. Выведите эту переменную на экран.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Значение NaN</h2>
+          <p>
+            Значение NaN (Not-A-Number) обозначает не число. Такое значение получается тогда, когда вы пытаетесь делать математические операции не с числами, а с чем-то другим. К примеру, такое значение даст попытка умножить строку на число.
+          </p>
+          <p>
+            alert('abc' * 3); // выведет NaN
+          </p>
+          <p>
+            Любые операции с NaN приводят к тому, что результатом все равно остается NaN.
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 5:</span> Сделайте две строки. Перемножьте их друг на друга. Выведите результат умножения на экран.
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Значения Infinity и -Infinity</h2>
+          <p>
+            Значения Infinity и -Infinity обозначают соответственно бесконечность и минус бесконечность. Такие значения получаются, если какое-то число поделить на ноль - в этом случает JavaScript не выдает ошибку, как в других языках программирования, а возвращает эти значения:
+          </p>
+          <p>
+            alert( 1 / 0); // выведет Infinity
+            <br>
+            alert(-1 / 0); // выведет -Infinity
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 6:</span> Поделите число 10 на 0. Выведите результат на экран. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 7:</span> Поделите число -10 на 0. Выведите результат на экран. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./special_values.js"></script>
