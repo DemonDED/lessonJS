@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../Переменные/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Получение символов строки</h2>
+          <p>
+            Пусть у нас есть какая-то строка. Каждый символ в этой строке имеет свой порядковый номер: первый символ номер 0, второй символ - номер 1, третий символ номер 2 и так далее. 
+          </p>
+          <p>
+            При необходимости можно получить доступ к определенному символу строки по его номеру. Для этого пишется имя переменной, после этого имени ставятся квадратные скобки и в этих скобках указывается номер символа. 
+          </p>
+          <p>
+            let str = 'abcde';
+            <br>
+            alert(str[0]); // выведет 'a'
+            <br>
+            alert(str[1]); // выведет 'b'
+            <br>
+            alert(str[2]); // выведет 'c'
+          </p>
+          <p>
+            Номер символа также может хранится и в переменной: 
+          </p>
+          <p>
+            let str = 'abcde';
+            <br>
+            let num = 3; // номер символа в переменной
+            <br>
+            alert(str[num]); // выведет 'd'
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 1:</span> Дана строка 'abcde'. Обращаясь к отдельным символам этой строки выведите на экран символ 'a', символ 'c', символ 'e'.
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span> Дана переменная со строкой 'abcde'. Обращаясь к отдельным символам этой строки запишите в новую переменную символы этой строки в обратном порядке, то есть 'edcba'.
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span> Дана переменная str со строкой 'abcde' и переменная num с номером символа. Выведите на экран символ, номер которого хранится в переменной num.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Неизменяемость строк</h2>
+          <p>
+            Символы строк можно читать, но нельзя изменять. Следующий пример кода выдаст ошибку (в строгом режиме):
+          </p>
+          <p>
+            let str = 'abcde';
+            <br>
+            str[0] = '!';
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./get_symbol_str.js"></script>

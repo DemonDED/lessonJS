@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../Переменные/style.css">
+  <title>Выделение чисел</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Выделение чисел</h2>
+          <p>
+            Функция Number работает только со строками, состоящими из цифр. Однако, при программировании на JavaScript часто встречаются ситуации, когда вам нужно обращаться со строками, в начале которых стоит число, а затем буквы. 
+          </p>
+          <p>
+            Примером такой строки может быть значение в пикселях: '12px'. Пусть нам необходимо достать стоящее в начале число, отбросив строковую часть.
+          </p>
+          <p>
+            Для такой операцииесть две функции:
+            <br>
+            parseInt() - для целочисленных
+            <br>
+            parseFloat() - для дробных
+          </p>
+          <p>
+            let a = "12px";
+            <br>
+            console.log(parseInt(a)); // выведет 12
+            <br>
+            let b = "12.34px";
+            console.log(parseFloat(b)); // выведет 12.34
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 1:</span> Дана переменная со значением '5px' и переменная со значением '6px'. Найдите сумму пикселей из значений этих переменных и выведите ее на экран. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span> Дана переменная со значением '5.5px' и переменная со значением '6.25px'. Найдите сумму пикселей из значений этих переменных и выведите ее на экран. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span> Модифицируйте предыдущую задачу так, чтобы к выводящемуся результату добавлялись буквы 'px'. То есть, если наша сумма равна 11.75, то на экран пусть выведется '11.75px'. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./parse_int_float.js"></script>

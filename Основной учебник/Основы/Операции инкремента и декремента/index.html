@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../Переменные/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Операции инкремента и декремента</h2>
+          <p>
+            Прибавление единицы в программировании встречается так часто, что для этой операции придуман еще более сокращенный синтаксис - специальный оператор инкремент ++, увеличивающий значение переменной на 1. 
+          </p>
+          <p>
+            let num = 0;
+            <br>
+            num++;        // прибавляем к переменной a число 1
+            <br>
+            alert(num);   // выведет 1
+          </p>
+          <p>
+            Есть также операция декремент --, уменьшающая значение переменной на 1.
+          </p>
+          <p>
+            let num = 0;
+            <br>
+            num--;        // отнимаем от переменной num число 1
+            <br>
+            alert(num);   // выведет -1
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 1:</span> Переделайте этот код так, чтобы в нем операции инкремента и декремента: <br>
+              let num = 10;
+              <br>
+              num = num + 1;
+              <br>
+              num = num + 1;
+              <br>
+              num = num - 1;
+              <br>
+              alert(num);
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Префиксный и постфиксный тип</h2>
+          <p>
+            В первом способе операция записывается после имени переменной, вот так: a++, а во втором способе - перед именем переменной, вот так: ++a. 
+          </p>
+          <p>
+            Первая форма называется постфиксной, а вторая - префиксной. Давайте посмотрим, в каких случаях проявляется разница между этими двумя формами. 
+          </p>
+          <p>
+            let num = 0;
+            <br>
+            alert(num++); // выведет 0
+            <br>
+            alert(num);   // выведет 1
+          </p>
+          <p>
+            let num = 0;
+            <br>
+            alert(++num); // выведет 1 - переменная увеличилась сразу
+          </p>
+          <p>
+            let num1 = 0;
+            <br>
+            let num2 = num1++; // в переменную num2 запишется 0
+            <br>
+            alert(num2); // выведет 0
+            <br>
+            alert(num1); // выведет 1 - переменная num1 поменялась после записи в num2
+          </p>
+          <p>
+            let num1 = 0;
+            <br>
+            let num2 = ++num1; // в переменную num2 запишется 1
+            <br>
+            alert(num2); // выведет 1
+          </p>
+          <p>
+            Все вышеописанное равнозначно для операции декремента (--).
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./increment_and_decrement.js"></script>

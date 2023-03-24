@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../Переменные/style.css">
+  <title>Преобразование к строке</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Преобразование к строке</h2>
+          <p>
+            Иногда нужно выполнить обратное преобразование - из числа в строку. Для этого предназначена функция String: 
+          </p>
+          <p>
+            let str = String(123); // теперь в переменной строка '123'
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 1:</span> Даны две переменные с числами. Сложите значения этих переменных как строки и выведите результат на экран.
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Применение</h2>
+          <p>
+            Например, для нахождения количества цифр в числе. Как вы уже знаете, чтобы найти длину строки, можно использовать свойство length.
+          </p>
+          <p>
+            Оно, однако, работает только со строками, а будучи применено к числу, не будет работать: 
+          </p>
+          <p>
+            let num = 12345;
+            <br>
+            alert(num.length); // выведет undefined
+          </p>
+          <p>
+            Для решения проблемы преобразуем наше число к строке и найдем длину этой строки: 
+          </p>
+          <p>
+            let num = 12345;
+            <br>
+            alert(String(num).length); // найдем длину строки
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span> Дана переменная с числом. Найдите количество цифр в этом числе.
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span> Даны две переменные с числами. Найдите количество цифр в одном и во втором числе, результаты сложите и выведите на экран.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./string_function.js"></script>

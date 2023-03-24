@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../Переменные/style.css">
+  <title>Преобразования логического типа</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Преобразования логического типа</h2>
+          <p>
+            Сейчас мы с вами рассмотрим, как ведут себя специальные значения true и false при преобразовании их к строкам или числам.
+          </p>
+          <p>
+            Итак, попробуем выполнить преобразование к строке, используя функцию String:
+          </p>
+          <p>
+            alert(String(true));  // выведет 'true'
+            <br>
+            alert(String(false)); // выведет 'false'
+          </p>
+          <p>
+            Как вы видите, значение true преобразуется в строку 'true', а значение false - в строку 'false'. То есть при попытке сложения строки и логического значения, это логическое значение преобразуется в строку и произойдет сложение строк:
+          </p>
+          <p>
+            alert('a' + true);    // выведет 'atrue'
+          </p>
+          <p>
+            При приведении к числу значение true преобразуется в число 1, а значение false - в число 0:
+          </p>
+          <p>
+            alert(Number(true));  // выведет 1
+            <br>
+            alert(Number(false)); // выведет 0
+          </p>
+          <p>
+            Во всех математических операциях логические значения вначале преобразуются к числу. Пример:
+          </p>
+          <p>
+            alert(true + 1);     // выведет 2
+            <br>
+            alert(true + true);  // выведет 2
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./boolean_to_str_num.js"></script>

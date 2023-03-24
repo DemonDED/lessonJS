@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../Переменные/style.css">
+  <title>Неточные вычисления</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Неточные вычисления</h2>
+          <p>
+            Дроби хранятся в компьютерах в таком виде, что часто могут быть представлены неточно. В этом случае вас может ждать некоторый сюрприз, когда банальная операция выдает странный результат.
+          </p>
+          <p>
+            let a = 0.1 + 0.2;
+            <br>
+            alert(a); // выведет 0.30000000000000004
+          </p>
+          <p>
+            Для борьбы с таким поведением можно применить специальный метод toFixed, выполняющий округление до заданного знака в дробной части.
+          </p>
+          <p>
+            let a = 0.1 + 0.2;
+            <br>
+            alert(a.toFixed(2)); // выведет '0.30'
+          </p>
+          <p>
+            Метод toFixed отдает результат в виде строки. Можно преобразовать его результат в число: 
+          </p>
+          <p>
+            let a = 0.1 + 0.2;
+            <br>
+            alert(+a.toFixed(2)); // выведет 0.3
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 1:</span>  Проверьте, что будет результатом следующей операции: alert(0.1 * 0.2);
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span>  Проверьте, что будет результатом следующей операции: alert(0.3 - 0.1);
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./to_fixed.js"></script>

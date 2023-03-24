@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../Переменные/style.css">
+  <title>Вывод в документ</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Вывод в документ</h2>
+          <p>
+            Средствами JavaScript можно управлять тегами HTML страницы, например, выводить в них текст. Этому мы будем учиться позднее, когда будем проходить раздел, посвященный работе с DOM. 
+          </p>
+          <p>
+            Иногда, однако, в отладочных целях требуется вывести какой-нибудь текст в окно браузера. Это делается с помощью команды document.write. Посмотрим работу с ней на примерах. 
+          </p>
+          <p>
+            document.write(123);
+            <br>
+            document.write('text');
+            <br>
+            document.write('<b>text</b>');
+            <br>
+            let str = 'text';
+            document.write(str);
+            <br>
+            let str = 'text';
+            document.write('<b>' + str + '</b>');
+            <br>
+            document.write('text <br> text');
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 1:</span>  Выведите в окно браузера какой-нибудь текст. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span>  Выведите в окно браузера какой-нибудь текст, сделав его курсивным. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span>  Выведите текст из переменной в окно браузера так, чтобы он был курсивным. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 4:</span>  Выведите в окно браузера столбец чисел от 1 до 5. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./document_write.js"></script>

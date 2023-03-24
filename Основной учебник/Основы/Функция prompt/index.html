@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../Переменные/style.css">
+  <title>Функция prompt</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Функция prompt</h2>
+          <p>
+            Вы уже знаете о существовании функции alert, выводящей заданное сообщение на экран. Существует также похожая функция prompt, которая позволяет получить от пользователя какой-либо текст. 
+          </p>
+          <p>
+            prompt('Ваше имя?');
+          </p>
+          <p>
+            Для того, чтобы получить доступ к введенному имени, результат работы функции prompt нужно присвоить в какую-нибудь переменную, например, вот так: 
+          </p>
+          <p>
+            let name = prompt('Ваше имя?');
+          </p>
+          <p>
+            Вы должны понимать, что при вызове функции prompt дальнейшее выполнение скрипта блокируется, пока не будут введены соответствующие данные. В общем-то, также работает и функция alert, только она ожидает нажатия на соответствующую кнопку. 
+          </p>
+          <p>
+            Кстати, использовать переменную не обязательно: 
+          </p>
+          <p>
+            alert('Ваше имя: ' + prompt('Ваше имя?'));
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 1:</span> Спросите возраст пользователя с помощью функции prompt. Выведите с помощью alert введенный пользователем возраст.
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Проблема с типами</h2>
+          <p>
+            Учтите, что функция prompt всегда возвращает строку, даже если пользователь вводил число.
+          </p>
+          <p>
+            let num1 = prompt('Введите первое число');
+            <br>
+            let num2 = prompt('Введите второе число');
+            <br>
+            alert(num1 + num2); // сложит числа как строки
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span>  Переделайте приведенный выше код так, чтобы суммировались числа, а не строки. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span> С помощью функции prompt спросите у пользователя сторону квадрата. Выведите на экран площадь введенного квадрата.
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 4:</span> С помощью двух функций prompt спросите у пользователя стороны прямоугольника. Выведите на экран периметр введенного прямоугольника.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./prompt.js"></script>

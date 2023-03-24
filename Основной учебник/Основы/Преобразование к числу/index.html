@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../Переменные/style.css">
+  <title>Преобразование к числу</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Преобразование к числу</h2>
+          <p>
+            Давайте рассмотрим следующий код: 
+          </p>
+          <p>
+            let a = '2';
+            <br>
+            let b = '3';
+            <br>
+            alert(a + b); // выведет '23'
+          </p>
+          <p>
+            Как вы видите, в нашем случае обе переменных содержат в себе строки и складываются, соответственно, как строки. 
+          </p>
+          <p>
+            Пусть мы хотели бы, чтобы значения наших переменных в данном случае складывались не как строки, а как числа. В этом случае мы можем принудительно преобразовать тип нашей переменной к числу, используя специальную функцию Number:
+          </p>
+          <p>
+            let a = '2';
+            <br>
+            let b = '3';
+            <br>
+            alert(Number(a) + Number(b)); // выведет 5
+          </p>
+          <p>
+            Можно преобразовывать строки в числа не в операции сложения, а сразу при записи в переменную - это будет работать.
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 1:</span> Дана переменная a со значением '10' и переменная b со значением '20'. Сложите данные переменные как числа. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span> alert( '2' + '3' );
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span> alert( 2 + '3' );
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 4:</span> alert( '2' + '3' );
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Альтернатива</h2>
+          <p>
+            Часто для сокращения кода вместо Number перед строкой ставят знак +. Таким образом над строкой выполняется операция, допустимая только для чисел и строка переводится в число. 
+          </p>
+          <p>
+            let a = +'2'; // в переменную запишется число 2
+            <br>
+            let b = +'3'; // в переменную запишется число 3
+            <br>
+            alert(a + b); // выведет 5
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 5:</span> 
+              <br>
+              let a = '2';
+              <br>
+              let b = '3';
+              <br>
+              alert(a + b); // выведет '23'
+              <br> 
+              С помощью описанного приема с плюсом исправьте приведенный код так, чтобы в переменные a и b присваивалось число, а не строка, ну и результатом, соответственно, было не '23', а 5. 
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Не только цифры</h2>
+          <p>
+            При попытке преобразовать строку, содержащую не только цифры, но и другие символы, функция Number вернет своим результатом значение NaN: 
+          </p>
+          <p>
+            alert(Number('2s')); // выведет NaN
+            <br>
+            alert(+'2s'); // выведет NaN
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./number_function.js"></script>

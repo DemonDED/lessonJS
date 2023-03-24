@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../Переменные/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Последний символ строки</h2>
+          <p>
+            Как вы видите, количество символов в этой строке равно 5. Если немного подумать, то становится очевидным, что номер последнего символа этой строки будет на 1 меньше ее длины, так как нумерация символов начинается с нуля. 
+          </p>
+          <p>
+            Получается, что зная длину строки, мы можем отнять от нее 1 и получить номер последнего символа, а затем по этому номеру можно получить сам последний символ. 
+          </p>
+          <p>
+            Как вы уже знаете, длину строки можно найти с помощью свойства length. Исходя из этого найдем номер последнего символа: 
+          </p>
+          <p>
+            let str = 'abcde';
+            <br>
+            let last = str.length - 1; // номер последнего символа
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 1:</span>  Дана строка. Выведите на экран ее последний символ. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span>  Дана строка. Выведите на экран ее предпоследний символ. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span>  Дана строка. Выведите на экран ее предпредпоследний символ. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./last_symbol_str.js"></script>
