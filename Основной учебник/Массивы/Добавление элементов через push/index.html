@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Добавление элементов через push</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Добавление элементов через push</h2>
+          <p>
+            С помощью специального метода push можно добавлять элементы в конец массива. Пример:
+          </p>
+          <p>
+            let arr = [];
+            <br>
+            arr.push('a');
+            <br>
+            arr.push('b');
+            <br>
+            arr.push('c');
+            <br>
+            console.log(arr); // выведет ['a', 'b', 'c']
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 1:</span>  Заполните массив числами 1, 2 и 3. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span>  Пусть дан такой массив: let arr = [1, 2, 3];  Добавьте ему в конец элементы 4 и 5. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./push_massive_elem.js"></script>

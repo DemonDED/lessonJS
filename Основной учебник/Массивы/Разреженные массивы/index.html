@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Разреженные массивы</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Разреженные массивы</h2>
+          <p>
+            Если в массиве будут ключи с пропусками, то можно получить разреженный массив. Давайте посмотрим, как он выглядит. Пусть у нас есть некоторый массив: 
+          </p>
+          <p>
+            let arr = ['a', 'b', 'c'];
+          </p>
+          <p>
+            Добавим к этому массиву еще один элемент так, чтобы ключи имели пропуски: 
+          </p>
+          <p>
+            arr[4] = '!';
+          </p>
+          <p>
+            В результате в массиве образуется дыра, имеющая значение undefined: 
+          </p>
+          <p>
+            console.log(arr); // выведет ['a', 'b', 'c', undefined, '!']
+          </p>
+          <p>
+            Длина массива будет вкючать в себя все дыры. То есть в нашем случае она будет 5, а не 4: 
+          </p>
+          <p>
+            console.log(arr.length); // выведет 5
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 1:</span> Узнайте длину следующего массива: <br> 
+              let arr = [];
+              <br>
+              arr[3] = 'a';
+              <br>
+              arr[8] = 'b';
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./sparse_array.js"></script>

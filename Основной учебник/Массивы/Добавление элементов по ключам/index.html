@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Добавление элементов массива по ключам</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Добавление элементов массива по ключам</h2>
+          <p>
+            Элементы в массив не обязательно добавлять сразу в момент объявления этого массива. Можно вначале объявить этот массив, а затем добавить в него необходимые элементы, вот так: 
+          </p>
+          <p>
+            let arr = [];
+            <br>
+            arr[0] = 'a';
+            <br>
+            arr[1] = 'b';
+            <br>
+            arr[2] = 'c';
+            <br>
+            console.log(arr); // выведет ['a', 'b', 'c']
+          </p>
+          <p>
+            Можно также добавлять элементы в массив, уже заполненный данными.
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 1:</span>  С помощью описанного приема создайте массив с элементами 1, 2 и 3. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span>  Пусть дан такой массив: let arr = [1, 2, 3];  Добавьте ему в конец элементы 4 и 5. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./add_elements_on_keys.js"></script>

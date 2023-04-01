@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Изменение элементов массива</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Изменение элементов массива</h2>
+          <p>
+            Элементы массивов можно изменять: 
+          </p>
+          <p>
+            let arr = ['a', 'b', 'c'];
+            <br>
+            arr[0] = '!';
+            <br>
+            console.log(arr); // выведет ['!', 'b', 'c']
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 1:</span> Создайте массив с элементами 'a', 'b', 'c'. Запишите вместо первого элемента число 1, вместо второго - 2, вместо третьего - 3. 
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Перезапись элементов</h2>
+          <p>
+            Можно также прочитывать текущее значение элемента, выполнять с ним какие-то операции и записывать измененное значение обратно в этот элемент: 
+          </p>
+          <p>
+            let arr = ['a', 'b', 'c'];
+            <br>
+            arr[0] = arr[0] + '!';
+            <br>
+            arr[1] = arr[1] + '!';
+            <br>
+            arr[2] = arr[2] + '!';
+            <br>
+            console.log(arr); // выведет ['a!', 'b!', 'c!']
+          </p>
+          <p>
+            Предыдущий код можно переписать через оператор += (-=, *=, /=).
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 2:</span> Создайте массив с числами. Прибавьте к каждому элементу массива число 3. Выведите на экран измененный массив.
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Инкремент и декремент</h2>
+          <p>
+            Можно также применять операции инкремента и декремента: 
+          </p>
+          <p>
+            let arr = [1, 2, 3, 4];
+            <br>
+            arr[0]++;
+            <br>
+            ++arr[1];
+            <br>
+            arr[2]--;
+            <br>
+            --arr[3];
+            <br>
+            console.log(arr); // выведет [2, 3, 2, 3]
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 3:</span>  Создайте массив с элементами 1, 2 и 3. С помощью оператора ++ увеличьте каждый элемент массива на единицу. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./choose _elements_massive.js"></script>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Ключ из переменных и оператор delete</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Ключи из переменных</h2>
+          <p>
+            Пусть у нас дан вот такой массив: 
+            <br>
+            <br>
+            let arr = ['a', 'b', 'c'];
+          </p>
+          <p>
+            Выведем на экран элемент с ключом 0: 
+          </p>
+          <p>
+            let arr = ['a', 'b', 'c'];
+            <br>
+            console.log(arr[0]); // выведет 'a'
+          </p>
+          <p>
+            Давайте теперь ключ выводимого элемента не будем писать непосредственно в квадратных скобках, а запишем его в переменную: 
+          </p>
+          <p>
+            let arr = ['a', 'b', 'c'];
+            <br>
+            let key = 0; // запишем ключ в переменную
+          </p>
+          <p>
+            Используем теперь нашу переменную для вывода соответствующего элемента: 
+          </p>
+          <p>
+            let arr = ['a', 'b', 'c'];
+            <br>
+            let key = 0; // запишем ключ в переменную
+            <br>
+            console.log(arr[key]); // выведет 'a'
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 1:</span>  Дан следующий массив: let arr = ['a', 'b', 'c'];  Дана также переменная: let key = 2;  Выведите на экран элемент, ключ которого хранится в переменной key. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span>  Дан следующий массив: let arr = [1, 2, 3, 4, 5];  Даны также переменные: let key1 = 1; let key2 = 2;  Найдите сумму элементов, ключи которых хранятся в наших переменных. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Оператор delete</h2>
+          <p>
+            Можно удалять элементы массивов с помощью оператора delete. Давайте посмотрим на примерах. Пусть у нас дан вот такой массив: 
+          </p>
+          <p>
+            let arr = ['a', 'b', 'c'];
+          </p>
+          <p>
+            Давайте удалим один из элементов нашего массива: 
+          </p>
+          <p>
+            delete arr[1];
+          </p>
+          <p>
+            В результате элемент удалиться, но массив станет разреженным: 
+          </p>
+          <p>
+            console.log(arr); // выведет ['a',, 'c']
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 3:</span>  Дан массив: let arr = ['a', 'b', 'c', 'd', 'e'];  Удалите из него два элемента. Проверьте, какое станет значение свойства length после этого. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./let_key_and_delete_massive.js"></script>
