@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Свойства объектов</h2>
+          <p>
+            Существует альтернативный способ обращения к элементам объекта. В этом способе мы после имени объекта ставим точку и пишем имя ключа. В этом случае ключ называется свойством объекта.
+          </p>
+          <p>
+            let obj = {a: 1, b: 2, c: 3};
+            <br>
+            console.log(obj.a); // выведет 1
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 1:</span>  Создайте объект date с ключами 'year', 'month' и 'day' и значениями, соответствующими текущему дню. Выведите созданную дату на экран в формате год-месяц-день. 
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Ограничения на ключи</h2>
+          <p>
+            Мы можем писать без кавычек не все ключи объектов, а только те, которые удовлетворяют следующим ограничениям: они не могут начинаться с цифры и не могут содержать внутри себя дефис, пробел и тому подобные вещи. 
+          </p>
+          <p>
+            Если строка нарушает ограничение, то ее нужно брать в кавычки.
+          </p>
+          <p>
+            К таким ключам можно обращаться только через квадратные скобки!
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 1:</span>  Дан объект: <br>
+                let obj = {
+                  '1a': 1,
+                  'b2': 2,
+                  'с-с': 3,
+                  'd 4': 4,
+                  'e5': 5
+                };
+                <br>
+                Для каких ключей данного объекта кавычки обязательны, а для каких нет? 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span>  Исправьте ошибки, допущенные в следующем коде: <br>
+                let obj = {
+                  '1a': 1,
+                  'b2': 2,
+                  'с-с': 3,
+                  'd 4': 4,
+                  'e5': 5
+                };
+                <br>
+                console.log(obj.1a);
+                <br>
+                console.log(obj.b2);
+                <br>
+                console.log(obj.c-c);
+                <br>
+                console.log(obj.d 4);
+                <br>
+                console.log(obj.e5);
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./obj_props.js"></script>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Изменение элементов объектов</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Изменение элементов объектов</h2>
+          <p>
+            Элементы объектов можно изменять, обращаясь к ним по ключам. Давайте посмотрим, как это делается:
+          </p>
+          <p>
+            let obj = {a: 1, b: 2, c: 3};
+            <br>
+            obj['a'] = '!';
+            <br>
+            или
+            <br>
+            obj.b = '!';
+            <br>
+            console.log(obj); // выведет {a: '!', b: 2, c: 3}
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 1:</span>  Дан объект: let obj = {x: 1, y: 2, z: 3};  Возведите в квадрат каждый элемент этого объекта. 
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Добавление элементов в объект</h2>
+          <p>
+            В объекты можно добавлять новые элементы, записывая их в нужные ключи. Давайте посмотрим, как это делается. 
+          </p>
+          <p>
+            let obj = {};
+            <br>
+            obj['a'] = 1;
+            <br>
+            obj['b'] = 2;
+            <br>
+            obj['c'] = 3;
+            <br>
+            или
+            <br>
+            obj.a = 1;
+            <br>
+            obj.b = 2;
+            <br>
+            obj.c = 3;
+            <br>
+            console.log(obj); // выведет {a: 1, b: 2, c: 3}
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 2:</span>  Создайте пустой объект, а затем заполните его значениями. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./change_elements.js"></script>

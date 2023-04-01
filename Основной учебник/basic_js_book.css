@@ -33,6 +33,10 @@ a {
   transform: translateX(15px);
   box-shadow: 1px 1px 5px red;
 }
+.medium a:hover {
+  transform: translateX(15px);
+  box-shadow: 1px 1px 5px yellow;
+}
 .easy > li {
   color: rgb(0, 194, 0);
   margin-bottom: 10px;

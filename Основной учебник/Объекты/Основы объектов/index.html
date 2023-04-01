@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Основы объектов</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Основы объектов</h2>
+          <p>
+            В JavaScript есть специальные структуры данных, которые называются объектами (в других языках программирования они называются ассоциативными массивами или хешами). 
+          </p>
+          <p>
+            Объекты создаются с помощью фигурных скобок { }, внутри которых пишутся элементы этого объекта в формате ключ: значение. 
+          </p>
+          <p>
+            let obj = {};
+            <br>
+            obj = {1: 'a', 2: 'b', 3: 'c'};
+            <br>
+            console.log(obj[1]); // выведет 'a'
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 1:</span>  Создайте объект с ключами от 1 до 7, в качестве значений содержащий имена дней недели. Выведите на экран все его элементы. 
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Вывод всего объекта</h2>
+          <p>
+            Содержимое всего объекта нельзя нормально посмотреть через функцию alert: 
+          </p>
+          <p>
+            let obj = {1: 'a', 2: 'b', 3: 'c'};
+            <br>
+            alert(obj); // выведет [Object object]
+          </p>
+          <p>
+            Чтобы посмотреть содержимое всего объекта, нужно вывести его в консоль.
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 2:</span>  Создайте объект с ключами от 1 до 12, в качестве значений содержащий названия месяцев. Выведите этот объект в консоль. 
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Строковые ключи объектов</h2>
+          <p>
+            Ключами объектов могут быть строки, при этом ключи-строки принято в кавычки не брать: 
+          </p>
+          <p>
+            let obj = {a: 1, b: 2, c: 3};
+            <br>
+            console.log(obj['a']); // выведет 1
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 3:</span>  Создайте объект user с ключами 'name', 'surname', 'patronymic' и какими-то произвольными значениями. Выведите на экран фамилию, имя и отчество через пробел. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./basics_obj.js"></script>
