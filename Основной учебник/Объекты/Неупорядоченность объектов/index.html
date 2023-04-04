@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Неупорядоченность объектов</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Неупорядоченность объектов</h2>
+          <p>
+            Как вы уже знаете, в массивах элементы располагаются в строгом порядке, ведь позиция каждого элемента определяет его ключ. В объектах же мы сами назначаем ключи, поэтому порядок следования элементов не имеет значения. То есть массивы являются упорядоченными списками, а объекты - нет. 
+          </p>
+          <p>
+            Кроме того, числовые ключи не обязательно должны иметь все значения без дырок, подобно массиву. У нас могут быть произвольные числа и это не будет приводить ни к каким проблемам (подобно разреженности у массивов). Поэтому следующий объект корректный: 
+          </p>
+          <p>
+            let obj = {7: 'a', 50: 'b', 23: 'c'};
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 1:</span>  Создайте объект и убедитесь, что порядок ключей в нем не имеет значения. 
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Массив ключей объекта</h2>
+          <p>
+            Можно получить массив ключей объекта. Давайте посмотрим, как это делается. Пусть у нас есть следующий объект: 
+          </p>
+          <p>
+            let obj = {a: 1, b: 2, c: 3};
+            <br>
+            let keys = Object.keys(obj);
+            <br>
+            console.log(keys);
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 2:</span>  Получите массив ключей следующего объекта: let obj = {x: 1, y: 2, z: 3};
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Длина объекта</h2>
+          <p>
+            У объектов нет свойства length, позволяющего найти их длину. Давайте убедимся в этом. Пусть у нас есть следующий объект: 
+          </p>
+          <p>
+            let obj = {a: 1, b: 2, c: 3};
+            <br>
+            console.log(obj.length); // выведет undefined
+            <br>
+            console.log(Object.keys(obj).length); // выведет 3
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 3:</span>  Найдите количество элементов в следующем объекте: let obj = {x: 1, y: 2, z: 3};
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Ключи объектов из переменных</h2>
+          <p>
+            Ключи объектов могут храниться в переменных. Посмотрим на примере.
+          </p>
+          <p>
+            let obj = {a: 1, b: 2, c: 3};
+            <br>
+            let key = 'a';
+            <br>
+            console.log(obj[key]); // выведет 1
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 4:</span>  Дан следующий объект: let obj = {x: 1, y: 2, z: 3}; <br>  Дана переменная key, в которой хранится один из ключей нашего объекта. Выведите с помощью этой переменной соответствующий элемент объекта. 
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Ошибка обращения к элементу по ключу</h2>
+          <p>
+            При обращению к элементу объекта через квадратные скобки имена ключей нужно брать в кавычки, а имена переменных - нет. Не понимание этого часто может приводить к ошибкам. Поэтому давайте еще раз обсудим правила обращения. 
+          </p>
+          <p>
+            console.log(obj['key']); // Обращение к ключу с именем key
+            <br>
+            console.log(obj[key]); // Обращение к переменной key 
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 5:</span>  Исправьте ошибку, допущенную в следующем коде: <br> 
+                let obj = {x: 1, y: 2, z: 3};
+                <br>
+                console.log(obj[x]);
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 6:</span>  Исправьте ошибку, допущенную в следующем коде: <br>
+                let obj = {x: 1, y: 2, z: 3};
+                <br>
+                let key = 'x';
+                <br>
+                console.log(obj['key']);
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Ошибка обращения к свойству объекта</h2>
+          <p>
+            При обращении к свойству объекта имя этого свойства не может хранится в переменной. Давайте посмотрим почему.
+          </p>
+          <p>
+            let key = 'a';
+            <br>
+            console.log(obj.key); // undefined
+          </p>
+          <p>
+            Приведенный код не будет работать, так как фактически мы ищем свойство с именем 'key', а не свойство, чье имя хранится в переменной key.
+          </p>
+          <p>
+            Единственным способом обратиться к элементу по ключу из переменной является запись этой переменной в квадратных скобках: 
+            <br>
+            console.log(obj[key]);
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 7:</span>  Исправьте ошибку, допущенную в следующем коде: <br>
+                let obj = {x: 1, y: 2, z: 3};
+                <br>
+                let prop = 'x';
+                <br>
+                console.log(obj.prop);
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 8:</span>  Исправьте ошибку, допущенную в следующем коде: <br>
+                let obj = {x: 1, y: 2, z: 3};
+                <br>
+                let prop = 'x';
+                <br>
+                console.log(obj['prop']);
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Вычисляемые свойства</h2>
+          <p>
+            При объявлении объекта имена его свойств могут браться из переменных. Такие свойства называются вычисляемыми.
+          </p>
+          <p>
+            let key = 'a';
+            <br>
+            let obj = {
+              [key]: 1,
+              b: 2,
+              c: 3
+            };
+          </p>
+          <p>
+            При объявлении вычисляемых свойств можно выполнять некоторый код. Пример: 
+          </p>
+          <p>
+            let obj = {
+              [key + '1']: 1,
+              [key + '2']: 2,
+              [key + '3']: 3
+            };
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 9:</span>  В следующем коде ключ должен был взяться из переменной. Исправьте допущенную ошибку: 
+                <br>
+                let key = 'x';
+                <br>
+                let obj = {
+                	key: 1,
+                	y: 2,
+                	z: 3
+                };
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 10:</span>  Дан объект: let obj = {
+                  x: 1,
+                  y: 2,
+                  z: 3
+                };  Даны переменные: let key1 = 'x';
+                let key2 = 'y';
+                let key3 = 'z';
+                <br>
+                Сделайте так, чтобы ключи объекта брались из этих переменных. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./disordered_objects.js"></script>

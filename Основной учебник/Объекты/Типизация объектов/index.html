@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Типизация объектов</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Типизация объектов</h2>
+          <p>
+            Объекты имеют свой тип данных, который называется 'object'. Проверим с помощью оператора typeof: 
+          </p>
+          <p>
+            console.log(typeof {}); // выведет 'object'
+          </p>
+        </div>
+        <div>
+          <h2>Массивы как объекты</h2>
+          <p>
+            Массивы на самом деле являются частным случаем объектов. В этом можно убедится, если проверить массив через оператор typeof: 
+          </p>
+          <p>
+            console.log(typeof []); // выведет 'object'
+          </p>
+        </div>
+        <div>
+          <h2>Отличие массива от объекта</h2>
+          <p>
+            Как было указано выше, оператор typeof не позволяет различать массивы и объекты. Иногда, однако, это необходимо сделать. На помощь придет функция Array.isArray(): 
+          </p>
+          <p>
+            console.log( Array.isArray([]) ); // выведет true
+            <br>
+            console.log( Array.isArray({}) ); // выведет false
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./typeof_objects.js"></script>

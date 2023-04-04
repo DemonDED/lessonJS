@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Операторы</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Оператор in</h2>
+          <p>
+            С помощью оператора in можно проверять наличие свойства в объекте.
+          </p>
+          <p>
+            let obj = {a: 1, b: 2, c: 3};
+            <br>
+            console.log('b' in obj); // выведет true
+            <br>
+            console.log('x' in obj); // выведет false
+          </p>
+        </div>
+        <div>
+          <h2>Оператор delete</h2>
+          <p>
+            Можно удалять элементы объектов с помощью оператора delete.
+          </p>
+          <p>
+            let obj = {a: 1, b: 2, c: 3};
+            <br>
+            delete obj.b;
+            <br>
+            console.log(obj); // выведет {a: 1, c: 3}
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./operators_objects.js"></script>
