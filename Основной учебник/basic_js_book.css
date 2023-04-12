@@ -43,6 +43,7 @@ a {
 }
 .medium > li {
   color: yellow;
+  margin-bottom: 10px;
 }
 .hard > li {
   color: red;

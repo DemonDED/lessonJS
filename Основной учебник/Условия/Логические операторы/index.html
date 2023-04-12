@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Логические операторы</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Логическое И</h2>
+          <p>
+            Можно группировать операции сравнения с помощью оператора &&, представляющего собой логическое И. В следующем примере, если переменная num больше нуля и одновременно меньше 10, только тогда выведется '+++': 
+          </p>
+          <p>
+            let num = 3;
+            <br>
+            if (num > 0 && num < 10) {
+              <br>
+            	console.log('+++');
+              <br>
+            } else {
+              <br>
+            	console.log('---');
+              <br>
+            }
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 1:</span> Проверьте, что переменная num больше нуля и меньше 5. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span> Проверьте, что переменная num больше или равна 10 и меньше или равна 20. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span> Проверьте, что переменная num1 равна или меньше 1, а переменная num2 больше или равна 3. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Логическое ИЛИ</h2>
+          <p>
+            Оператор || представляет собой логическое ИЛИ и требует выполнения хотя бы одного условия. 
+          </p>
+          <p>
+            let num1 = 10;
+            <br>
+            let num2 = -5;
+            <br><br>
+            if (num1 > 0 || num2 > 0) {
+              <br>
+            	console.log('+++'); // сработает это
+              <br>
+            } else {
+              <br>
+            	console.log('---');
+            }
+          </p>
+        </div>
+        <div>
+          <h2>Приоритет логических операций</h2>
+          <p>
+            Операция && имеет приоритет над ||.
+          </p>
+        </div>
+        <div>
+          <h2>Группировка условий</h2>
+          <p>
+            Хотя операция && и имеет приоритет над ||, часто удобнее использовать группирующие круглые скобки, чтобы явно показать приоритет операций: 
+          </p>
+          <p>
+            let num = 3;
+            <br><br>
+          if ( (num > 0 && num < 5) || (num > 10 && num < 20) ) {
+            <br>
+          	console.log('+++');
+            <br>
+          } else {
+            <br>
+          	console.log('---');
+            <br>
+          }
+          </p>
+        </div>
+        <div>
+          <h2>Инвертирование логических выражений</h2>
+          <p>
+            Гораздо проще будет использовать оператор !, представляющий собой логическое НЕ. С помощью этого оператора нам достаточно поставить знак ! перед изначальным условием - и оно инвертируется само: 
+          </p>
+          <p>
+            if ( !(num > 0 && num < 5) ) {
+              <br>
+              console.log('+++');
+              <br>
+            } else {
+              <br>
+              console.log('---');
+              <br>
+            }
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 1:</span> Дан следующий код: <br>
+              if (num1 >= 0 || num2 <= 10) {
+                <br>
+                console.log('+++');
+                <br>
+              } else {
+                <br>
+                console.log('---');
+                <br>
+              }
+              <br>
+              Используя оператор ! инвертируйте приведенное условие. 
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Условия с булевыми значениями</h2>
+          <p>
+            Пусть у нас есть какая-то переменная, которая может принимать значения true или false: 
+          </p>
+          <p>
+            let test = true;
+          </p>
+          <p>
+            Давайте напишем if, проверяющий нашу переменную на значение true: 
+          </p>
+          <p>
+            let test = true;
+            <br>
+            if (test === true) {
+              <br>
+            	console.log('+++');
+              <br>
+            } else {
+              <br>
+            	console.log('---');
+              <br>
+            }
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span>  Проверьте, что переменная test равна true. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span>  Проверьте, что переменная test равна false. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Сравнение значений с булевым типом</h2>
+          <p>
+            В предыдущем примере мы использовали для сравнения оператор ===. В этом случае наша переменная сравнивалась на равенство true как по значению, так и по типу. 
+          </p>
+          <p>
+            Для такого сравнения можно использовать и оператор ==. Если в переменной test всегда будет одно из значений true или false, то ничего и не изменится: 
+          </p>
+          <p>
+            А вот если в переменную test могут попадать любые значения, то все становится намного сложнее. 
+          </p>
+          <p>
+            В таком случае, если в переменной test будет не булево значение, то это значение вначале будет преобразовано к булеву и только затем будет сравниваться. 
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 4:</span> Вспомните и напишите, какие значения при приведении к логическому типу дают false. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./boolean_operators.js"></script>

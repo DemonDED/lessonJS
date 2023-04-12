@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Проверки</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Проверка частей часа через if-else</h2>
+          <p>
+            Давайте определим, в какую четверть часа попадает указанное количество минут: 
+          </p>
+          <p>
+            let min = 10;
+            <br><br>
+            if (min >= 0 && min <= 14) {
+            <br>
+            	console.log('1 четверть');
+            }
+            <br><br>
+            if (min >= 15 && min <= 29) {
+            <br>
+            	console.log('2 четверть');
+            }
+            <br><br>
+            if (min >= 30 && min <= 44) {
+            <br>
+            	console.log('3 четверть');
+            }
+            <br><br>
+            if (min >= 45 && min <= 59) {
+            <br>
+            	console.log('4 четверть');
+            }
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 1:</span> Решите аналогичную задачу, только определите в какую треть часа попадает указанное количество минут. 
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Проверка длины строк и массивов</h2>
+          <p>
+            Давайте напишем условие, которое выведет сообщение в консоль, если длина строки равна или больше трех символов: 
+          </p>
+          <p>
+            let str = '12345';
+            <br><br>
+            if (str.length >= 3) {
+              <br>
+            	console.log('!');
+              <br>
+            }
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 2:</span> В переменной arr содержится некоторый массив с числами. Напишите условие, которое проверит, что в массиве 3 элемента. Если это так, выведите на экран сумму элементов массива.
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Проверка символов строки</h2>
+          <p>
+            Давайте проверим, равен ли первый символ этой строки числу 1: 
+          </p>
+          <p>
+            let str = '12345';
+            <br><br>
+            if (str[0] == 1) {
+              <br>
+            	console.log('!');
+              <br>
+            }
+          </p>
+          <p>
+            Проверим теперь последний символ на равенство числу 5: 
+          </p>
+          <p>
+            let str = '12345';
+            <br>
+            let last = str[str.length - 1];
+            <br><br>
+            if (last == 5) {
+              <br>
+            	console.log('!');
+              <br>
+            }
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span> Дана переменная, содержащая некоторую строку. Проверьте, что эта строка начинается на символ 'a'.
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 4:</span> Дана переменная, содержащая некоторую строку. Проверьте, что эта строка заканчивается на символ 'x'.
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 5:</span> Дана переменная, содержащая некоторую строку. Проверьте, что эта строка начинается на символ 'a' или символ 'b'.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Проверка цифр числа</h2>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 6:</span> Дано целое число. Напишите условие, которое проверит, равна ли последняя цифра этого числа нулю.
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 7:</span> Пусть в переменной num хранится число. Определите, четное число или нет. Число будет четным, если последний символ равен 0, 2, 4, 6 или 8, и нечетным в противном случае.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Проверка остатка от деления</h2>
+          <p>
+            let a = 10;
+            <br>
+            let b = 3;
+            <br>
+            let rest = a % b;
+            <br><br>
+            if (rest === 0) {
+              <br>
+            	console.log('делится нацело');
+              <br>
+            } else {
+              <br>
+            	console.log('делится с остатком ' + rest);
+              <br>
+            }
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 8:</span> Как известно, четные числа делятся на 2 без остатка, а нечетные - с остатком. Пусть у вас дано число. С помощью оператора % и конструкции if проверьте четное это число или нет.
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 8:</span>  Дано число. Проверьте, что оно делится на 3.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./checks.js"></script>

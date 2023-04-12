@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>ПРАКТИКА if-else</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>ПРАКТИКА на поиск ошибок</h2>
+          <p>
+            Для просмотра результатов откройте консоль
+          </p>
+          <div class="task-list">
+
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 1:</span>  Код должен проверить сумму чисел: <br>
+                let num1 = 1;
+let num2 = 2;
+
+if (num1 + num2 === 3) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span>  Код должен проверить сумму чисел: <br>
+                let num1 = '1';
+let num2 = '2';
+
+if (num1 + num2 === 3) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span>  Код должен проверить сумму чисел: <br>
+                let num1 = '1';
+let num2 = '2';
+
+if (Number(num1 + num2) === 3) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 4:</span>  Код должен проверить первую цифру числа: <br>
+                let num = 123;
+
+if (num[0] === 1) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 5:</span>  Код должен проверить первую цифру числа: <br>
+                let num = 123;
+
+if (String(num[0]) === 1) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 6:</span>  Код должен проверить первую цифру числа: <br>
+                let num = 123;
+
+if (String(num)[0] === 1) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 7:</span>  Код должен проверить, что в числе ровно две цифры: <br>
+                let num = 12;
+
+if (num.length === 2) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 8:</span>  Код должен проверить, что в числе ровно две цифры: <br>
+                let num = 12;
+
+if (num.length === 2) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 9:</span>  Код должен проверить, что в числе ровно две цифры: <br>
+                let num = 12;
+let str = Number(str);
+
+if (str.length === 2) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 10:</span>  Код должен проверить, что в числе ровно две цифры: <br>
+                let num = 12;
+
+if (String(num.length) === 2) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 11:</span>  Код должен проверить, что в числе ровно две цифры: <br>
+                let num = 12;
+
+if (String(num).length === String(2)) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+              </p>
+            </div>   
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 12:</span>  Код должен проверить, что в числе ровно две цифры: <br>
+                let num = 12;
+
+if (String(num).lenght === 2) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 13:</span>  Код должен проверить равна ли сумма первых трех цифр числа сумме вторых трех чисел: <br>
+                let num = '123033'; // берем в кавычки, чтобы обращаться к цифрам
+
+let sum1 = num[0] + num[1] + num[2];
+let sum2 = num[3] + num[4] + num[5];
+
+if (sum1 == sum2) {
+	console.log('суммы равны');
+} else {
+	console.log('суммы не равны');
+}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>ПРАКТИКА if-else</h2>
+          <p>
+            Для просмотра результатов откройте консоль
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 14:</span>  В переменной month лежит какое-то число из интервала от 1 до 12. Определите в какую пору года попадает этот месяц (зима, лето, весна, осень). 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 15:</span>  Дана строка, состоящая из символов, например, 'abcde'. Проверьте, что первым символом этой строки является буква 'a'. Если это так - выведите 'да', в противном случае выведите 'нет'. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 16:</span>  Дано число, например, 12345. Проверьте, что первым символом этого числа является цифра 1, 2 или 3. Если это так - выведите 'да', в противном случае выведите 'нет'. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 17:</span>  Дано трехзначное число. Найдите сумму цифр этого числа. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 18:</span>  Дано число из 6-ти цифр. Проверьте, что сумма первых трех цифр равняется сумме вторых трех цифр. Если это так - выведите 'да', в противном случае выведите 'нет'. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./main.js"></script>

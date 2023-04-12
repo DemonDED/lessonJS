@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Необязательные и дополнительные конструкции</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Необязательнсоть конструкции else</h2>
+          <p>
+            Конструкция else не является обязательной.
+          </p>
+          <p>
+            let test = 1;
+            <br><br>
+            if (test == 1) {
+              <br>
+            	console.log('+++');
+              <br>
+            }
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 1:</span> Проверьте, что переменная test равна 10, то пусть на экран выведется 'yes'. В противном случае пусть ничего не произойдет.
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Необязательность фигурных скобок</h2>
+          <p>
+            В случае, если в фигурных скобках if или else будет только одно выражение, можно эти фигурные скобки не писать.
+          </p>
+          <p>
+            if (test === 0) console.log('+++'); else console.log('---');
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span> Перепишите следующий код в сокращенной форме: <br>
+                if (test > 0) {
+                  <br>
+                  console.log('+++');
+                  <br>
+                } else {
+                  <br>
+                  console.log('---');
+                  <br>
+                }
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span>  Перепишите следующий код в сокращенной форме: <br>
+                if (test > 0) {
+                  <br>
+                  console.log('+++');
+                  <br>
+                }
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Конструкция else if</h2>
+          <p>
+            Конструкция else if позволяет задавать условия в блоке else.
+          </p>
+          <p>
+            let num = 1;
+            <br><br>
+            if (num == 1) {
+              <br>
+            	console.log('value1');
+              <br>
+            } else if (num == 2) {
+              <br>
+            	console.log('value2');
+              <br>
+            } else if (num == 3) {
+              <br>
+            	console.log('value3');
+              <br>
+            }
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 4:</span> В переменной day лежит какое-то число из интервала от 1 до 31. Определите в какую декаду месяца попадает это число (в первую, вторую или третью). 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 5:</span> Модифицируйте предыдущую задачу так, чтобы, если в переменной day будет не число от 1 до 31, выдавалось сообщение об ошибке. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Вложенные конструкции if-else</h2>
+          <p>
+            Конструкции if-else можно вкладывать друг в друга произвольным образом.
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 6:</span> Пусть в переменной num хранится число. Если это число попадает в диапазон от 10 до 99, то найдите сумму цифр этого числа. Если полученная сумма меньше или равна 9, то выведите сообщение о том, что сумма цифр однозначна, в противном случае выведите сообщение о том, что сумма цифр двухзначна. 
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Конструкция switch-case</h2>
+          <p>
+            С помощью конструкции switch-case можно выполнять различный код, в зависимости от значения переменной.
+          </p>
+          <p>
+            switch (переменная) {
+              <br>
+              case 'значение1':
+              <br>
+                /*
+                <br>
+                  здесь код, который выполнится в случае,
+                  <br>
+                  если переменная имеет значение1
+                  <br>
+                */
+                <br>
+              break;
+              <br>
+              case 'значение2':
+              <br>
+                /*
+                <br>
+                  здесь код, который выполнится в случае,
+                  <br>
+                  если переменная имеет значение2
+                  <br>
+                */
+                <br>
+              break;
+              <br>
+              case 'значение3':
+              <br>
+                /*
+                <br>
+                  здесь код, который выполнится в случае,
+                  <br>
+                  если переменная имеет значение3
+                  <br>
+                */
+                <br>
+              break;
+              <br>
+              default:
+              <br>
+                /*
+                <br>
+                  здесь код, который выполнится в случае,
+                  <br>
+                  если не совпала ни с одним значением
+                  <br>
+                */
+                <br>
+              break;
+              <br>
+            }
+          </p>
+          <p>
+            let num = 1;
+            <br><br>
+            switch (num) {
+              <br>
+            	case 1:
+              <br>
+            		console.log('value1');
+                <br>
+            	break;
+              <br>
+            	case 2:
+              <br>
+            		console.log('value2');
+                <br>
+            	break;
+              <br>
+            	case 3:
+              <br>
+            		console.log('value3');
+                <br>
+            	break;
+              <br>
+            	default:
+              <br>
+            		console.log('incorrect value');
+                <br>
+            	break;
+              <br>
+            }
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 7:</span>  Перепишите следующий код через switch-case: <br>
+              let lang = 'ru';
+              <br><br>
+              if (lang == 'ru') {
+                <br>
+              	console.log('рус');
+                <br>
+              } else if (lang == 'en') {
+                <br>
+              	console.log('анг');
+                <br>
+              } else if (lang == 'de') {
+                <br>
+              	console.log('нем');
+                <br>
+              } else {
+                <br>
+              	console.log('язык не поддерживается');
+                <br>
+              }
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Необязательность break в конструкции switch-case</h2>
+          <p>
+            Команда break в конструкции switch-case не является обязательной. При отсутствии break после выполнения задуманного case, выполнятся и все case ниже него. 
+          </p>
+        </div>
+        <div>
+          <h2>Тренарный оператор</h2>
+          <p>
+            В данном уроке мы рассмотрим специальный тернарный оператор, представляющий собой сокращенный вариант конструкции if-else. Его синтаксис выглядит следующим образом: 
+          </p>
+          <p>
+            let переменная = условие ? значение1 : значение2;
+          </p>
+          <p>
+            Тернарный оператор следует использовать только в самых простых случаях, так как его использование затрудняет понимание кода. 
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 8:</span>  Перепишите следующий код через тернарный оператор: <br>
+              let num = 1;
+              <br>
+              let res;
+              <br><br>
+              if (num >= 0) {
+                <br>
+              	res = '1';
+                <br>
+              } else {
+                <br>
+              	res = '2';
+                <br>
+              }
+              <br><br>
+              console.log(res);
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Логические операции</h2>
+          <p>
+            Операторы сравнения можно использовать вне конструкций if. Смотрите пример: 
+          </p>
+          <p>
+            console.log(1 == 1); // выведет true
+            <br>
+            console.log(1 == 2); // выведет false
+          </p>
+          <p>
+            Можно сравнивать переменные. Можно не выводить результат сразу в консоль, а присвоить его какой-нибудь переменной: 
+          </p>
+          <p>
+            let a = 1;
+            <br>
+            let b = 2;
+            <br><br>
+            let result = a == b;
+            <br>
+            console.log(result);
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 9:</span>  Пусть даны следующие переменные: <br>
+                let a = 2 * (3 - 1);
+                <br>
+                let b = 6 - 2;
+                <br>
+                Используя оператор ==, узнайте, равны ли значения этих переменных или нет. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 10:</span>  Пусть даны следующие переменные: <br>
+                let a = 5 * (7 - 4);
+                <br>
+                let b = 1 + 2 + 7;
+                <br>
+                Используя оператор >, узнайте, больше ли переменная a, чем b. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 11:</span>  Пусть даны следующие переменные: <br>
+                let a = 2 ** 4;
+                <br>
+                let b = 4 ** 2;
+                <br>
+                Используя операцию оператор !=, узнайте, разные ли значения этих переменных или нет. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./optional_construction.js"></script>

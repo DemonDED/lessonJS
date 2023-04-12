@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Сокращенные формы</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Сокращенная форма проверки на истину</h2>
+          <p>
+            При программировании такие проверки требуются очень часто, поэтому для них существует более изящная сокращенная форма: вместо if (test == true) можно написать просто if (test). 
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 1:</span>  Перепишите следующий код с использованием сокращенной формы: <br>
+              let test = true;
+              <br><br>
+              if (test === true) {
+                <br>
+              	console.log('+++');
+                <br>
+              } else {
+                <br>
+              	console.log('---');
+                <br>
+              }
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Сокращенная форма проверки на ложь</h2>
+          <p>
+            Вместо if (test !== true) можно написать просто if (!test).
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span>  Перепишите следующий код с использованием сокращенной формы: <br>
+                let test = true;
+                <br><br>
+                if (test == false) {
+                  <br>
+                	console.log('+++');
+                  <br>
+                } else {
+                  <br>
+                	console.log('---');
+                  <br>
+                }
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span>  Перепишите следующий код с использованием сокращенной формы: <br>
+                let test = true;
+                <br><br>
+                if (test != true) {
+                  <br>
+                	console.log('+++');
+                  <br>
+                } else {
+                  <br>
+                	console.log('---');
+                  <br>
+                }
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 4:</span>  Перепишите следующий код с использованием сокращенной формы: <br>
+                let test = true;
+                <br><br>
+                if (test != false) {
+                  <br>
+                	console.log('+++');
+                  <br>
+                } else {
+                  <br>
+                	console.log('---');
+                  <br>
+                }
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Общая сокращенная форма</h2>
+          <p>
+            Сокращенная форма проверки работает и для других типов данных. В этом случае эти данные сначала преобразуются к булеву типу, а потом сравниваются с true.
+          </p>
+          <p>
+            if (test) эквивалентно в этом случае if (Boolean(test) === true).
+          </p>
+        </div>
+        <div>
+          <h2>Сложные условия в сокращенной форме</h2>
+          <p>
+            В сокращенной форме можно использовать операторы && и ||.
+          </p>
+          <p>
+            if (test1 && test2) или if (test1 || test2).
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 5:</span>  Перепишите следующий код в сокращенной форме: <br>
+                let test1 = true;
+                <br>
+                let test2 = true;
+                <br><br> 
+                if (test1 === true && test2 === true) {
+                  <br>
+                	console.log('+++');
+                  <br>
+                } else {
+                  <br>
+                	console.log('---');
+                  <br>
+                }
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 6:</span>  Перепишите следующий код в сокращенной форме: <br>
+                let test1 = true;
+                <br>
+                let test2 = true;
+                <br><br>
+                if (test1 === true && test2 !== true) {
+                  <br>
+                	console.log('+++');
+                  <br>
+                } else {
+                  <br>
+                	console.log('---');
+                  <br>
+                }
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 7:</span>  Перепишите следующий код в сокращенной форме: <br>
+                let test1 = true;
+                <br>
+                let test2 = true;
+                <br><br>  
+                if (test1 !== true && test2 !== true) {
+                  <br>
+                	console.log('+++');
+                  <br>
+                } else {
+                  <br>
+                	console.log('---');
+                  <br>
+                }
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 8:</span>  Перепишите следующий код в сокращенной форме: <br>
+                let test1 = true;
+                <br>
+                let test2 = true;
+                <br><br>
+                if (test1 !== false && test2 === true) {
+                  <br>
+                	console.log('+++');
+                  <br>
+                } else {
+                  <br>
+                	console.log('---');
+                  <br>
+                }
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 9:</span>  Перепишите следующий код в сокращенной форме: <br>
+                let test1 = true;
+                <br>
+                let test2 = true;
+                <br>
+                let test3 = true;
+                <br><br>
+                if (test1 === true && test2 === true && test3 === true) {
+                  <br>
+                	console.log('+++');
+                  <br>
+                } else {
+                  <br>
+                	console.log('---');
+                  <br>
+                }
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 10:</span>  Перепишите следующий код в сокращенной форме: <br>
+                let test1 = true;
+                <br>
+                let test2 = true;
+                <br>
+                let test3 = true;
+                <br><br>
+                if (test1 === true || test2 === true && test3 === true) {
+                  <br>
+                	console.log('+++');
+                  <br>
+                } else {
+                  <br>
+                	console.log('---');
+                  <br>
+                }
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 11:</span>  Перепишите следующий код в сокращенной форме: <br>
+                let test1 = true;
+                <br>
+                let test2 = true;
+                <br>
+                let test3 = true;
+                <br><br>
+                if (test1 === true || test2 === false && test3 === false) {
+                  <br>
+                	console.log('+++');
+                  <br>
+                } else {
+                  <br>
+                	console.log('---');
+                  <br>
+                }
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./abbreviated_forms.js"></script>
