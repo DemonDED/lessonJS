@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Суммирование, строки, цифры и числа</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Накопление чисел в циклах</h2>
+          <p>
+            Давайте с помощью цикла найдем сумму целых чисел от 1 до 100. Для решения такой задачи в цикле перебираются числа и их сумма последовательно записывается в какую-то переменную: 
+          </p>
+          <p>
+            let res = 0;
+            <br><br>
+            for (let i = 1; i <= 100; i++) {
+              <br>
+            	res += i;
+              <br>
+            }
+            <br><br>
+            console.log(res);
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 1:</span>  Найдите сумму четных чисел от 2 до 100. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span>  Найдите сумму нечетных чисел от 1 до 99. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span>  Найдите произведение целых чисел от 1 до 20. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Накопление элементов массивов в циклах</h2>
+          <p>
+            Давайте с помощью цикла найдем сумму элементов массива. 
+          </p>
+          <p>
+            let arr = [1, 2, 3, 4, 5];
+            <br>
+            let res = 0;
+            <br><br>
+            for (let elem of arr) {
+              <br>
+            	res += elem;
+              <br>
+            }
+            <br><br>
+            console.log(res); // искомая сумма
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 4:</span>  Дан массив: let arr = [2, 5, 9, 3, 1, 4]; Найдите сумму элементов этого массива. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 5:</span>  Дан массив: let arr = [2, 5, 9, 3, 1, 4]; Найдите сумму элементов элементов, являющихся четными числами. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 6:</span>  Дан массив: let arr = [2, 5, 9, 3, 1, 4]; Найдите сумму квадратов элементов этого массива. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 7:</span>  Дан массив: let arr = [2, 5, 9, 3, 1, 4]; Найдите произведение элементов этого массива. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Формирование строк через циклы</h2>
+          <p>
+            С помощью циклов можно формировать строки. Давайте для примера сделаем строку, заполненную десятью буквами 'x': 
+          </p>
+          <p>
+            let str = '';
+            <br><br>
+            for (let i = 0; i < 10; i++) {
+              <br>
+            	str += 'x';
+              <br>
+            }
+            <br><br>
+            console.log(str); // выведет 'xxxxxxxxxx'
+          </p>
+          <p>
+            А теперь сделаем строку '12345'. Для этого будем прибавлять к нашей переменной счетчик цикла: 
+          </p>
+          <p>
+            let str = '';
+            <br><br>
+            for (let i = 1; i <= 5; i++) {
+              <br>
+            	str += i;
+              <br>
+            }
+            <br><br>
+            console.log(str); // выведет '12345'
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 8:</span>  С помощью цикла сформируйте строку, заполненную 5-тью дефисами. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 9:</span>  С помощью цикла сформируйте строку '123456789'. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 10:</span>  С помощью цикла сформируйте строку '987654321'. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 11:</span>  С помощью цикла сформируйте строку '-1-2-3-4-5-6-7-8-9-'. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Цифры числа при переборе циклом</h2>
+          <p>
+            Пусть при переборе чисел мы хотим получать от этих чисел какую-нибудь цифру. К примеру, мы хотим сделать так, чтобы число выводилось в консоль, если его первая цифра равна 1 или 2. 
+          </p>
+          <p>
+            Сначала необходимо преобразовать число в строку и уже тогда получать определенный символ полученной строки, вот так: 
+          </p>
+          <p>
+            for (let i = 1; i <= 100; i++) {
+              <br>
+              let str = String(i); // преобразуем число в строку
+              <br><br>
+              if (str[0] === '1' || str[0] === '2') {
+                <br>
+                console.log(i);
+                <br>
+              }
+              <br>
+            }
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 12:</span>  Переберите циклом числа от 10 до 1000 и выведите в консоль первую цифру каждого числа. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 13:</span> Переберите циклом числа от 10 до 1000 и выведите в консоль сумму первой и второй цифры каждого числа. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 14:</span>  Переберите циклом числа от 10 до 1000 и выведите те числа, первая цифра которых равна 1. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 15:</span>  Переберите циклом числа от 10 до 1000 и выведите на экран те числа, сумма двух первых цифр которых равна 5. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./sum_sting_number_in_cicle.js"></script>
