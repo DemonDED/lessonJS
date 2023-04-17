@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Многомерные объекты</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Многомерные объекты</h2>
+          <p>
+            Многомерными могут быть не только массивы, но и объекты, вот пример: 
+          </p>
+          <p>
+            let obj = {
+              <br>
+              a: {
+                <br>
+                key1: 'a1',
+                <br>
+                key2: 'a2',
+                <br>
+                key3: 'a3',
+                <br>
+              },
+              <br>
+              b: {
+                <br>
+                key1: 'b1',
+                <br>
+                key2: 'b2',
+                <br>
+                key3: 'b3',
+                <br>
+              },
+              <br>
+              c: {
+                <br>
+                key1: 'c1',
+                <br>
+                key2: 'c2',
+                <br>
+                key3: 'c3',
+                <br>
+              },
+              <br>
+            }
+          </p>
+          <p>
+            Давайте выведем какие-нибудь элементы нашего объекта: 
+          </p>
+          <p>
+            console.log(obj['a']['key1']); // выведет 'a1'
+            <br>
+            console.log(obj.a.key1); // выведет 'a1'
+            <br>
+            console.log(obj['a'].key1); // выведет 'a1'
+          </p>
+        </div>
+        <div>
+          <h2>Перебор многомерных объектов</h2>
+          <p>
+            Пусть дан следующий двухмерный объект: 
+          </p>
+          <p>
+            Для этого нам необходимо запустить два вложенных друг в друга цикла for-in: 
+          </p>
+          <p>
+            for (let key in obj) {
+              <br>
+              let subObj = obj[key];
+              <br><br>
+              for (let subKey in subObj) {
+                <br>
+                console.log(subObj[subKey]);
+                <br>
+              }
+              <br>
+            }
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./multidimensional_obj.js"></script>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Многомерные структуры</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Многомерные структуры</h2>
+          <p>
+            Можно комбинировать многомерные массивы и объекты, создавая различные структуры. Давайте, к примеру, сделаем объект, содержащий внутри себя массивы: 
+          </p>
+          <p>
+            let days = {
+              <br>
+              'ru': ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
+              <br>
+              'en': ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'],
+              <br>
+            };
+          </p>
+          <p>
+            Выведем какие-нибудь элементы из этого объекта: 
+          </p>
+          <p>
+            console.log(days['ru'][0]); // выведет 'пн'
+            <br>
+            console.log(days['en'][2]); // выведет 'wd'
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 1:</span>  Дан следующий объект со студентами: <br><br>
+              let students = {
+                <br>
+                'group1': ['name11', 'name12', 'name13'],
+                <br>
+                'group2': ['name21', 'name22', 'name23'],
+                <br>
+                'group3': ['name31', 'name32', 'name33'],
+                <br>
+              };
+              <br><br>
+              Выведите на экран первого студента из третьей группы. 
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Перебор многомерных структур</h2>
+          <p>
+            Пусть у нас дан следующий объект со студентами: 
+          </p>
+          <p>
+            let students = {
+              <br>
+              'group1': ['student11', 'student12', 'student13'],
+              <br>
+              'group2': ['student21', 'student22', 'student23'],
+              <br>
+              'group3': ['student31', 'student32'],
+              <br>
+            };
+          </p>
+          <p>
+            Давайте выведем на экран имена всех студентов, перебрав наш объект двумя вложенными циклами. 
+          </p>
+          <p>
+            Как вы видите, у нас объект с массивами. Это значит, что первый цикл должен быть по объекту, а второй - по массивам. То есть первый цикл будет for-in, а второй - for-of, вот так: 
+          </p>
+          <p>
+            for (let group in students) {
+              <br>
+              for (let name of students[group]) {
+                <br>
+                console.log(name);
+                <br>
+              }
+              <br>
+            }
+          </p>
+        </div>
+        <div>
+          <h2>Ключи из переменных в многомерных структурах</h2>
+          <p>
+            
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./multidimensional_structures.js"></script>
