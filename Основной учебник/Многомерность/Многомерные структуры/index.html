@@ -92,7 +92,65 @@
         <div>
           <h2>Ключи из переменных в многомерных структурах</h2>
           <p>
-            
+            Пусть теперь язык и номер дня хранятся в переменных: 
+          </p>
+          <p>
+            let obj = {
+              <br>
+              'ru': ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
+              <br>
+              'en': ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'],
+              <br>
+            };
+            <br>
+            let lang = 'ru';
+            <br>
+            let day = 3;
+            <br>
+            console.log(obj[lang][day]);
+          </p>
+        </div>
+        <div>
+          <h2>Добавление элементов в многомерные массивы</h2>
+          <p>
+            Для этого параметром метода push передадим новый объект с юзером: 
+          </p>
+          <p>
+            let users = [
+            <br>
+            	{
+                <br>
+            		name: 'name1',
+                <br>
+            		surn: 'surn1',
+                <br>
+            	},
+              <br>
+            	{
+                <br>
+            		name: 'name2',
+                <br>
+            		surn: 'surn2',
+                <br>
+            	},
+              <br>
+            	{
+                <br>
+            		name: 'name3',
+                <br>
+            		surn: 'surn3',
+                <br>
+            	},
+              <br>
+            ];
+            <br><br>
+            users.push({
+              <br>
+              name: 'name4',
+              <br>
+              surn: 'surn4',
+              <br>
+            });
           </p>
         </div>
       </div>
