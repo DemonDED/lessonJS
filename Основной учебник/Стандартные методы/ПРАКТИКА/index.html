@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>ПРАКТИКА на методы</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Практика на использования изученных методов</h2>
+          <p>
+            Давайте преобразуем первую букву этой строки в верхний регистр: 
+          </p>
+          <p>
+            let str = 'london';
+            <br><br>
+            let result = str.slice(0, 1).toUpperCase() + str.slice(1);
+            <br>
+            console.log(result); // выведет 'London'
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 1:</span>  Преобразуйте последнюю букву строки в верхний регистр. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span>  Преобразуйте первые 2 буквы строки в верхний регистр. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span>  Пусть дана строка, у которой первая буква в верхнем регистре, например вот такая: let str = 'London'; Преобразуйте первую букву строки в нижний регистр. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Слова в строке</h2>
+          <p>
+            Давайте напишем код, который преобразует первую букву каждого слова в верхний регистр. Сразу приведу решение с комментариями: 
+          </p>
+          <p>
+            let str = 'word1 word2 word3';
+            <br><br>
+            // Разобьем строку в массив слов:
+            <br>
+            let words = str.split(' ');
+            <br><br>
+            for (let i = 0; i < words.length; i++) {
+              <br>
+            	// Увеличим регистр каждого слова:
+              <br>
+            	words[i] = words[i].slice(0, 1).toUpperCase() + words[i].slice(1);
+              <br>
+            }
+            <br><br>
+            // Сольем массив обратно в строку:
+            <br>
+            let result = words.join(' ');
+            <br>
+            console.log(result); // выведет 'Word1 Word2 Word3'
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 4:</span>  Самостоятельно, не подсматривая в мой код, повторите мое решение описанной задачи. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 5:</span>  Преобразуйте строку 'var_test_text' в 'VarTestText'.  Написанный код должен работать для любых строк такого типа (то есть для строк, в которых слова разделены символов подчеркивания). 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 6:</span>  Модифицируйте предыдущую задачу так, чтобы первая буква новой строки была в нижнем регистре. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./main.js"></script>

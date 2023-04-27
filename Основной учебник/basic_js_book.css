@@ -47,6 +47,27 @@ a {
 }
 .hard > li {
   color: red;
+  margin-bottom: 10px;
+}
+.oval {
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin: 0.5rem;
+}
+.green-o {
+  background-color: green;
+}
+.yellow-o {
+  background-color: yellow;
+}
+.red-o {
+  background-color: red;
+}
+#info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 #content {
   display: flex;
