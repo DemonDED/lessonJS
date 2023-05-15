@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Введенние в пользовательские функции</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Основы работы с пользовательскими функциями</h2>
+          <p>
+            Функция создается с помощью команды function. Далее через пробел следует имя функции, круглые скобки, а затем фигурные скобки, в которых пишется какой-то код: 
+          </p>
+          <p>
+            function func() {
+              <br>
+              // какой-то код
+              <br>
+            }
+          </p>
+          <p>
+            Давайте теперь вызовем нашу функцию. Для этого необходимо написать ее имя и круглые скобки: 
+          </p>
+          <p>
+            function func() {
+              <br>
+              console.log('!');
+              <br>
+            }
+            <br><br>
+            // Вызываем нашу функцию:
+            <br>
+            func(); // выведет '!'
+          </p>
+          <p>
+            Можно вызвать нашу функцию несколько раз, функции могут быть вызваны до места своего определения: 
+          </p>
+          <p>
+            func(); // выведет '!'
+            <br><br>
+            function func() {
+              <br>
+            	console.log('!');
+              <br>
+            }
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 1:</span>  Сделайте функцию, выводящую в консоль ваше имя. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span>  Сделайте функцию, выводящую в консоль сумму чисел от 1 до 100. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Параметры функций</h2>
+          <p>
+            Функции могут принимать параметрами данные. Для примера давайте сделаем функцию, которая параметром будет принимать число: 
+          </p>
+          <p>
+            function func(num) {
+              <br>
+              console.log(num ** 2);
+              <br>
+            }
+            <br><br>
+            func(2); // выведет 4
+            <br>
+            func(3); // выведет 9
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span>  Сделайте функцию, которая параметром принимает число и выводит в консоль куб этого числа. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 4:</span>  Сделайте функцию, которая параметром принимает число и проверяет, положительное это число или отрицательное. В первом случае пусть функция выводит в консоль текст '+++', а во втором '---'. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Несколько параметров функций</h2>
+          <p>
+            Функция может принимать не один параметр, а несколько. В этом случае их нужно перечислить через запятую.
+          </p>
+          <p>
+            function func(num1, num2) {
+              <br>
+              console.log(num1 + num2);
+              <br>
+            }
+            <br><br>
+            func(1, 2); // выведет 3
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 5:</span>  Сделайте функцию, которая параметрами принимает 3 числа и выводит в консоль сумму этих чисел. 
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Параметры-переменные функций</h2>
+          <p>
+            В параметры функции можно передавать переменные.
+          </p>
+          <p>
+            function func(num) {
+              <br>
+              console.log(num ** 2);
+              <br>
+            }
+            <br><br>
+            let param = 2;
+            <br>
+            func(param);
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 6:</span> Сделайте функцию func, которая параметром будет принимать 3 числа и выводить в консоль их сумму. Пусть даны 3 переменные с числами: <br><br>
+              let param1 = 1;
+              <br>
+              let param2 = 2;
+              <br>
+              let param3 = 3;
+              <br><br>
+              С помощью созданной вами функции выведите в консоль сумму значений эти переменных. 
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Необязательные параметры</h2>
+          <p>
+            Параметры функций можно делать не обязательными. Для этого параметрам нужно задать значения по умолчанию.
+          </p>
+          <p>
+            function func(num = 0) {
+              <br>
+              console.log(num ** 2);
+              <br>
+            }
+            <br><br>
+            func(2); // выведет 4
+            <br>
+            func(); // выведет 0
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./basic_finctions.js"></script>

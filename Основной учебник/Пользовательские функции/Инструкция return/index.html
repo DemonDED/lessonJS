@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Инструкция return</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Инструкция return</h2>
+          <p>
+            Пусть у нас есть функция, которая выводит в консоль квадрат переданного числа: 
+            <br><br>
+            function func(num) {
+              <br>
+              console.log(num ** 2);
+              <br>
+            }
+          </p>
+          <p>
+            Пусть мы хотим не выводить значение в консоль, а записать в какую-нибудь переменную, вот так: 
+            <br><br>
+            let res = func(3); // в переменной res теперь 9
+          </p>
+          <p>
+            Для этого в JavaScript существует специальная инструкция return, которая позволяет указать значение, которое возвращает функция. Под словом "возвращает" понимают то значение, которое запишется в переменную, если ей присвоить вызванную функцию. 
+          </p>
+          <p>
+            Итак, давайте перепишем нашу функцию так, чтобы она не выводила результат в консоль, а возвращала его в переменную: 
+            <br><br>
+            function func(num) {
+              <br>
+              return num ** 2;
+              <br>
+            }
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 1:</span>  Сделайте функцию, которая параметром принимает число, а возвращает куб этого числа. С помощью этой функции найдите куб числа 3 и запишите его в переменную res. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span>  Сделайте функцию, которая параметром принимает число, а возвращает квадратный корень из этого числа. С помощью этой функции найдите корень числа 3, затем найдите корень числа 4. Просуммируйте полученные результаты и выведите их в консоль. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Последовательный вызов функций</h2>
+          <p>
+            Можно также результат работы одной функции передать параметром в другую, например, вот так мы сначала найдем квадрат числа 2, а затем квадрат результата: 
+            <br><br>
+            function func(num) {
+              <br>
+              return num ** 2;
+              <br>
+            }
+            <br><br>
+            let res = func(func(2));
+            <br>
+            console.log(res); // выведет 16
+          </p>
+          <p>
+            Функции, конечно же, не обязательно должны быть одинаковыми.
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span> Пусть у вас есть функция, возвращающая квадратный корень из числа, и функция, округляющая дробь до трех знаков в дробной части: <br>
+                function sqrt(num) {
+                  <br>
+                  return Math.sqrt(num);
+                  <br>
+                }
+                <br><br>
+                function round(num) {
+                  <br>
+                  return num.toFixed(3);
+                  <br>
+                }
+                <br><br>
+                С помощью этих функций найдите квадратный корень из числа 2 и округлите его до трех знаков в дробной части. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 4:</span>  Пусть у вас есть функция, возвращающая квадратный корень из числа, и функция, возвращающая сумму трех чисел: <br><br>
+                function sqrt(num) {
+                  <br>
+                  return Math.sqrt(num);
+                  <br>
+                }
+                <br><br>
+                function sum(num1, num2, num3) {
+                  <br>
+                  return num1 + num2 + num3;
+                  <br>
+                }
+                <br><br>
+                С помощью этих функций найдите сумму корней чисел 2, 3 и 4 и запишите ее в переменную res. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 5:</span>  Пусть у вас есть функция, округляющая дробь до трех знаков в дробной части: 
+                <br><br>
+                function round(num) {
+                  <br>
+                  return num.toFixed(3);
+                  <br>
+                }
+                <br><br>
+                С помощью этой функции модифицируйте предыдущую задачу так, чтобы в переменную res записывалась дробь, округленная до 3-х знаков в дробной части. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Тонкое место return</h2>
+          <p>
+            После того, как выполнится инструкция return - функция закончит свою работу и никакой код дальше не выполнится. Смотрите пример: 
+          </p>
+          <p>
+            function func(num) {
+              <br>
+              return num ** 2;
+              <br><br>
+              console.log('!'); // этот код никогда не выполнится
+              <br>
+            }
+            <br><br>
+            let res = func(3);
+          </p>
+          <p>
+            Это не значит, что в функции должен быть один return. Но выполнится только один из них.
+          </p>
+        </div>
+        <div>
+          <h2>Цикл и return</h2>
+          <p>
+            Пусть у нас есть функция, возвращающая сумму чисел от 1 до 5: 
+            <br><br>
+            function func() {
+              <br>
+              let sum = 0;
+              <br><br>
+              for (let i = 1; i <= 5; i++) {
+                <br>
+                sum += i;
+                <br>
+              }
+              <br><br>
+              return sum;
+              <br>
+            }
+            <br><br>
+            let res = func();
+            <br>
+            console.log(res); // выведет 15
+          </p>
+          <p>
+            Пусть теперь мы расположим return внутри цикла, вот так: 
+            <br><br>
+            function func() {
+              <br>
+              let sum = 0;
+              <br><br>
+              for (let i = 1; i <= 5; i++) {
+                <br>
+                sum += i;
+                <br>
+                return sum;
+                <br>
+              }
+              <br>
+            }
+            <br><br>
+            let res = func();
+            <br>
+            console.log(res);
+          </p>
+          <p>
+            В этом случае цикл прокрутится лишь одну итерацию и произойдет автоматический выход из функции (ну и заодно из цикла). А за одну итерацию цикла в переменной sum окажется лишь число 1, а не вся нужная сумма. 
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 6:</span>  Что выведется в консоль в результате выполнения следующего кода: 
+              <br><br>
+              function func(num) {
+                <br>
+                let sum = 0;
+                <br><br>
+                for (let i = 1; i <= num; i++) {
+                  <br>
+                  sum += i;
+                  <br>
+                  return sum;
+                  <br>
+                }
+                <br>
+              }
+              <br><br>
+              console.log( func(5) );
+              <br><br>
+              Объясните почему. Что хотел сделать автор данного кода? Исправьте ошибку автора. 
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Применение return в циклах</h2>
+          <p>
+            То, что return расположен внутри цикла, не всегда может быть ошибкой. В следующем примере сделана функция, которая определяет, сколько первых элементов массива нужно сложить, чтобы сумма стала больше или равна 10: 
+          </p>
+          <p>
+            function func(arr) {
+              <br>
+              let sum = 0;
+              <br><br>
+              for (let i = 0; i < arr.length; i++) {
+                <br>
+                sum += arr[i];
+                <br><br>
+                // Если сумма больше или равна 10:
+                <br>
+                if (sum >= 10) {
+                  <br>
+                  return i + 1; // выходим из цикла и из функции
+                  <br>
+                }
+                <br>
+              }
+              <br>
+            }
+            <br><br>
+            let res = func([1, 2, 3, 4, 5]);
+            <br>
+            console.log(res);
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 7:</span>  Напишите функцию, которая параметром будет принимать число и делить его на 2 столько раз, пока результат не станет меньше 10. Пусть функция возвращает количество итераций, которое потребовалось для достижения результата. 
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Прием работы с return</h2>
+          <p>
+            Существуют некоторые приемы работы с return, упрощающие код. Рассмотрим, к примеру, следующий код: 
+            <br><br>
+            function func(num) {
+              <br>
+              let res;
+              <br><br>
+              if (num >= 0) {
+                <br>
+                res = Math.sqrt(num);
+                <br>
+              } else {
+                <br>
+                res = 0;
+                <br>
+              }
+              <br><br>
+              return res;
+              <br>
+            }
+            <br><br>
+            console.log(func(3));
+          </p>
+          <p>
+            Давайте перепишем этот код в более сокращенной форме, избавившись от ненужной здесь переменной res: 
+            <br><br>
+            function func(num) {
+              <br>
+              if (num >= 0) {
+                <br>
+                return Math.sqrt(num);
+                <br>
+              } else {
+                <br>
+                return 0;
+                <br>
+              }
+              <br>
+            }
+            <br><br>
+            console.log(func(3));
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 8:</span>  Дана следующая функция: <br><br>
+              function func(num1, num2) {
+                <br>
+                let res;
+                <br><br>
+                if (num1 > 0 && num2 > 0) {
+                  <br>
+                  res = num1 * num2;
+                  <br>
+                } else {
+                  <br>
+                  res = num1 - num2;
+                  <br>
+                }
+                <br><br>
+                return res;
+                <br>
+              }
+              <br></br>
+              console.log(func(3, 4));
+              <br><br>
+              Перепишите ее в сокращенной форме согласно изученной теории. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./return_instruction.js"></script>

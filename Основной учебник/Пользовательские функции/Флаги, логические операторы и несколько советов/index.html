@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Флаги, логические операторы и несколько советов по функциям</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Флаги в функциях</h2>
+          <p>
+            В функциях можно использовать флаги в неявном виде с помощью инструкции return. Давайте посмотрим, как это делается. Пусть у нас есть следующая функция, проверяющая, что все элементы массива положительные числа: 
+            <br><br>
+            function isPositive(arr) {
+              <br>
+              let flag = true;
+              <br><br>
+              for (let elem of arr) {
+                <br>
+                if (elem < 0) {
+                  <br>
+                  flag = false;
+                  <br>
+                }
+                <br>
+              }
+              <br><br>
+              return flag;
+              <br>
+            }
+          </p>
+          <p>
+            Давайте перепишем код функции с помощью неявного использования флагов: 
+            <br><br>
+            function isPositive(arr) {
+              <br>
+              for (let elem of arr) {
+                <br>
+                if (elem < 0) {
+                  <br>
+                  return false;
+                  <br>
+                }
+                <br>
+              }
+              <br><br>
+              return true;
+              <br>
+            }
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 1:</span>  Сделайте функцию, которая параметром будет принимать массив с числами, и проверять, что все элементы в этом массиве являются четными числами. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span>  Сделайте функцию, которая параметром будет принимать число и проверять, что все цифры это числа являются нечетными. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span>  Сделайте функцию, которая параметром будет принимать массив и проверять, есть ли в этом массиве два одинаковых элемента подряд. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Логические операторы без if в функциях</h2>
+          <p>
+            Пусть у нас есть функция с ифом. Вот она: 
+            <br><br>
+            function func(a, b) {
+              <br>
+              if (a > b) {
+                <br>
+                return true;
+                <br>
+              } else {
+                <br>
+                return false;
+                <br>
+              }
+              <br>
+            }
+          </p>
+          <p>
+            Как вы уже знаете из предыдущих уроков, конструкции if, возвращающие булевы значения, можно переписывать в сокращенной форме. Давайте сделаем это: 
+            <br><br>
+            function func(a, b) {
+              <br>
+              return a > b;
+              <br>
+            }
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 4:</span>  Дана следующая функция: 
+                <br><br>
+                function func(a, b) {
+                  <br>
+                  if (a == b) {
+                    <br>
+                    return true;
+                    <br>
+                  } else {
+                    <br>
+                    return false;
+                    <br>
+                  }
+                  <br>
+                }
+                <br><br>
+                Перепишите ее код в сокращенной форме согласно изученной теории. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 5:</span>  Дана следующая функция: 
+                <br><br>
+                function func(a, b) {
+                  <br>
+                  if (a != b) {
+                    <br>
+                    return true;
+                    <br>
+                  } else {
+                    <br>
+                    return false;
+                    <br>
+                  }
+                  <br>
+                }
+                <br><br>
+                Перепишите ее код в сокращенной форме согласно изученной теории. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 6:</span>  Дана следующая функция: 
+                <br><br>
+                function func(a, b) {
+                  <br>
+                  if (a + b >= 10) {
+                    <br>
+                    return true;
+                    <br>
+                  } else {
+                    <br>
+                    return false;
+                    <br>
+                  }
+                  <br>
+                }
+                <br><br>
+                Перепишите ее код в сокращенной форме согласно изученной теории. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 7:</span>  Дана следующая функция: 
+                <br><br>
+                function func(num) {
+                  <br>
+                  if (num >= 0) {
+                    <br>
+                    return true;
+                    <br>
+                  } else {
+                    <br>
+                    return false;
+                    <br>
+                  }
+                  <br>
+                }
+                <br><br>
+                Перепишите ее код в сокращенной форме согласно изученной теории. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Советы по созданию функций</h2>
+          <ol>
+            <li>Имена функций должны быть глаголами. </li>
+            <li>Имя каждой функции должно точно отражать то, что функция делает. </li>
+            <li>Функция должна делать только то, что явно подразумевается её названием, и не делать другого. </li>
+            <li>Каждая функция должна выполнять только одно действие. </li>
+            <li>Используйте внутри функций вспомогательные функции. </li>
+            <li>Код функций лучше не делать длиннее 10-15 строк. </li>
+            <li>Длинные функции лучше разбивать на ряд вспомогательных. </li>
+            <li>Используйте общепринятые префиксы в именах функций: show, get, set, calc, create, change, check. </li>
+            <li>Выносите дублирующийся код в функции. </li>
+          </ol>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./flags_boolean_operators_in_functions.js"></script>
