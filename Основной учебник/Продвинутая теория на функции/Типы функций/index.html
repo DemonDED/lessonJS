@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Исходный код, функция как переменная</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Исходный код функции и ее результат</h2>
+          <p>
+            В JavaScript можно написать имя функции без круглых скобок. В этом случае мы увидим не результат работы функции, а ее исходный код.
+          </p>
+          <p>
+            function func() {
+              <br>
+              return '!';
+              <br>
+            }
+            <br><br>
+            console.log(func); // увидим код функции
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 1:</span> Запустите приведенный выше код у себя и убедитесь в том, что в консоль выводится исходный код функции. 
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Функция как переменная</h2>
+          <p>
+            Итак, в предыдущем уроке мы с вами выяснили, что обратившись к функции без круглых скобок, мы получаем ее исходный код. 
+          </p>
+          <p>
+            На самом деле все намного интереснее. В JavaScript, в отличие от других языков, функции являются такими же значениями переменных, как числа, строки и массивы. 
+          </p>
+          <p>
+            На самом деле у нас нет функции func. У нас есть переменная func, хранящая в себе исходный код функции. 
+          </p>
+          <p>
+            Мы можем, к примеру, затереть переменную func чем-нибудь другим, например, строкой. В этом случае функция func больше не будет функцией, а будет строкой. Смотрите на примере: 
+          </p>
+          <p>
+            function func() {
+              <br>
+              console.log('!');
+              <br>
+            }
+            <br>
+            func(); // выведет '!'
+            <br><br>
+            func = 'string'; // затрем переменную func
+            <br>
+            console.log(func); // выведет 'string'
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span>  Сделайте функцию func, которая будет возвращать через return какую-либо строку. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span>  Выведите результат работы функции func в консоль. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 4:</span>  Выведите исходный код функции func в консоль. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 5:</span>  Запишите в переменную func число 123, тем самым затерев функцию из этой переменной. Выведите новое значение переменной func в консоль. 
+              </p>
+            </div>
+          </div>
+        
+        <h2>Запись функции в другую переменную</h2>
+        <p>
+          Давайте скопируем ее исходный код в переменную test: 
+        </p>
+        <p>
+          function func() {
+            <br>
+            console.log('!');
+            <br>
+          }
+          <br><br>
+          let test = func; // теперь test такая же функция, как и func
+          <br><br>
+          // Проверим:
+          <br>
+          test(); //выведет '!'
+          <br>
+          func(); //выведет '!'
+        </p>
+        <div class="task-list">
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 6:</span>  Сделайте функцию func1, которая будет возвращать через return число 3. 
+            </p>
+          </div>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 7:</span>  Скопируйте исходный код функции func1, в переменную func2. 
+            </p>
+          </div>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 8:</span>  Выведите в консоль сумму результатов работы функций func1 и func2. 
+            </p>
+          </div>
+        </div>
+        <h2>Присваивание функций в переменные при создании</h2>
+        <p>
+          Итак, мы с вами уже выяснили, что название функции и ее исходный код отделены друг от друга. Поэтому в JavaScript существует альтернативный синтаксис для создания функции: создается функция без имени и присваивается в какую-нибудь переменную. Эта переменная и становится именем функции. 
+        </p>
+        <p>
+          let func = function() {
+            <br>
+            console.log('!');
+            <br>
+          };
+          <br><br>
+          func(); // выведет '!'
+        </p>
+        <div class="task-list">
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 9:</span>  Сделайте безымянную функцию, которая будет возвращать через return число 1. Запишите эту функцию в переменную func1. 
+            </p>
+          </div>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 10:</span>  Сделайте безымянную функцию, которая будет возвращать через return число 2. Запишите эту функцию в переменную func2. 
+            </p>
+          </div>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 11:</span>  Найдите сумму значений функций func1 и func2. Выведите эту сумму алертом в консоль. 
+            </p>
+          </div>
+        </div>
+        <h2>Важный нюанс</h2>
+        <p>
+          Из описанного выше следует, что существование переменной и функции с одинаковым именем легко может привести к проблеме. 
+        </p>
+        <p>
+          Чтобы такого не происходило, следует придерживаться правила, общего для всех языков программирования: функции должны быть глаголами, а переменные - существительными.
+        </p>
+      </div>
+      <div>
+        <h2>Function expression и Function declaration</h2>
+        <p>
+          После изучения предыдущего урока вы теперь знаете, что в JavaScript функцию можно объявить двумя способами. 
+        </p>
+        <p>
+          Первый способ - это просто объявить функцию через function, сразу задав ее имя: 
+          <br><br>
+          function func() {
+            <br>
+            console.log('!');
+            <br>
+          }
+          <br><br>
+          func(); // выведет '!'
+        </p>
+        <p>
+          Второй способ - это сделать безымянную функцию и записать ее в какую-либо переменную: 
+          <br><br>
+          let func = function() {
+            <br>
+            console.log('!');
+            <br>
+          };
+          <br><br>
+          func(); // выведет '!'
+        </p>
+        <p>
+          По научному первый способ называется Function Declaration (объявление функции), а второй - Function Expression (функциональное выражение). 
+        </p>
+        <div class="task-list">
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 12:</span>  Определите, является ли представленная функция Function Declaration или Function Expression: <br><br>
+              function func() {
+                <br>
+                console.log('!');
+                <br>
+              }
+            </p>
+          </div>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 13:</span>  Определите, является ли представленная функция Function Declaration или Function Expression: <br><br>
+              let func = function() {
+                <br>
+                console.log('!');
+                <br>
+              }
+            </p>
+          </div>
+        </div>
+        <h2>Разница</h2>
+        <p>
+          Оба способа объявления функции эквивалентны, но есть существенная разница: функции, объявленные как Function Declaration, будут доступны, даже если обратится к ним до того, как они были объявлены. 
+        </p>
+        <p>
+          Смотрите пример: 
+          <br><br>
+          // Обращаемся к функции до ее объявления:
+          <br>
+          func(); //выведет '!'
+          <br><br>
+          function func() {
+            <br>
+          	console.log('!');
+            <br>
+          }
+        </p>
+        <p>
+          А функциональные выражения создаются в момент выполнения кода и недоступны выше. Поэтому такой код выдаст ошибку: <br><br>
+          func(); //ошибка, такой функции еще нет!
+          <br><br>
+          let func = function() {
+            <br>
+          	console.log('!');
+            <br>
+          };
+        </p>
+        <div class="task-list">
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 14:</span>  Создайте функцию как Function Declaration. Проверьте то, что она будет доступна выше места своего объявления. 
+            </p>
+          </div>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 15:</span>  Создайте функцию как Function Expression. Проверьте то, что она не будет доступна выше места своего объявления. 
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>Массив с анонимными функциями</h2>
+        <p>
+          В частности, можно сделать массив, состоящий из функций.
+          <br><br>
+          let arr = [
+          <br>
+	function() {console.log('1')},
+  <br>
+	function() {console.log('2')},
+  <br>
+	function() {console.log('3')},
+  <br>
+];
+        </p>
+        <p>
+          console.log(arr[0]); // увидим исходный код первой функции
+          <br>
+          arr[0](); // выведет '1'
+        </p>
+        <p>
+          Можно также перебрать наш массив с функциями циклом и в этом цикле вызвать каждую из функций: 
+          <br><br>
+          for (let func of arr) {
+            func(); // вызываем наши функции в цикле
+          }
+        </p>
+        <div class="task-list">
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 16:</span>  Сделайте массив arr с тремя функциями. Пусть первая возвращает через return число 1, вторая - число 2, третья - число 3. 
+            </p>
+          </div>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 17:</span>  Используя созданный вами массив arr выведите в консоль число 3, вызвав соответствующую функцию. 
+            </p>
+          </div>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 18:</span>  Используя созданный вами массив arr найдите сумму результатов функций (без цикла). 
+            </p>
+          </div>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 19:</span>  Переберите созданный вами массив arr циклом и выведите результаты работы всех функций в консоль. 
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>Объект с анонимными функциями</h2>
+        <p>
+          В предыдущем уроке мы с вами делали массив, состоящий из функций. Давайте теперь вместо массива сделаем объект с ключами, значениями которых будут функции: 
+        </p>
+        <p>
+          let obj = {
+            <br>
+            func1: function() {console.log(1)},
+            <br>
+            func2: function() {console.log(2)},
+            <br>
+            func3: function() {console.log(3)},
+            <br>
+          };
+        </p>
+        <p>
+          Воспользуемся нашим объектом: 
+          <br><br>
+          obj.func1(); // выведет 1
+        </p>
+        <div class="task-list">
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 20:</span>  Сделайте объект с тремя функциями. Пусть первая возвращает через return число 1, вторая - число 2, третья - число 3. С помощью созданных функций выведите в консоль сумму возвращаемых чисел. 
+            </p>
+          </div>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 21:</span>  Переберите созданный объект циклом и выведите результаты работы функций в консоль. 
+            </p>
+          </div>
+        </div>
+        <h2>Применение</h2>
+        <p>
+          Давайте сделаем объект с двумя функциями, каждая из которых параметром будет принимать число. Пусть первая функция возводит переданное число в квадрат, а вторая функция - в куб. Реализуем: 
+        </p>
+        <p>
+          let math = {
+            <br>
+            square: function(num) {return num * num},
+            <br>
+            cube: function(num) {return num * num * num},
+            <br>
+          };
+          <br><br>
+          console.log( math.square(2) ); // выведет 4
+          <br>
+          console.log( math.cube(2) ); // выведет 8
+        </p>
+        <div class="task-block">
+          <p class="task">
+            <span class="warning">Задача 22:</span>  Сделайте объект с тремя функциями, каждая из которых будет принимать параметром массив с числами. Сделайте так, чтобы первая функция возвращала сумму элементов массива, вторая функция - сумму квадратов, а третья - сумму кубов. 
+          </p>
+        </div>
+      </div>
+      <div>
+        <h2>Передача функций параметрами</h2>
+        <p>
+
+        </p>
+        <div class="task-block">
+          <p class="task">
+            <span class="warning">Задача 23:</span> Сделайте функцию test, параметрами принимающую 3 функции. Передайте в нее первым параметром функцию, возвращающую 1, вторым - функцию, возвращающую 2, третьим - функцию, возвращающую 3. Выведите в консоль сумму результатов функций. 
+          </p>
+        </div>
+      </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./source_code_and_func_how_variable.js"></script>
