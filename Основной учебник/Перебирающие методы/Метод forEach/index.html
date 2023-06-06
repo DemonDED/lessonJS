@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Метод forEach, filter, every</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Метод forEach для перебора массива</h2>
+          <p>
+            Метод forEach позволяет последовательно перебрать все элементы массива. Метод в параметре получает функцию, которая выполнится для каждого элемента массива. 
+            <br>
+            В эту функцию можно передавать три параметра. Если эти параметры есть (они не обязательны), то в первый автоматически попадет элемент массива, во второй попадет его номер в массиве (индекс), а в третий - сам массив. 
+          </p>
+          <p>
+            Синтаксис:
+            <br>
+            массив.forEach(function(элемент, индекс, массив) {
+              <br>
+              код, который выполнится для всех элементов
+              <br>
+            });
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 1:</span> Дан массив с числами. Используя метод forEach найдите сумму квадратов элементов этого массива. 
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Метод filter</h2>
+          <p>
+            Метод filter позволяется отфильтровать элементы массива, оставив только подходящие под определенное условие элементы. Метод в параметре получает функцию, которая выполнится для каждого элемента массива. Своим результатом метод возвращает новый массив, в который войдут только те элементы, для которых переданная функции вернет true. 
+          </p>
+          <p>
+            Синтаксис:
+            <br>
+            let новый массив = массив.filter(function(элемент, индекс, массив) {
+              <br>
+              код
+              <br>
+              return true или false
+              <br>
+            });
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span>  Дан массив с числами. Оставьте в нем только положительные числа. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span>  Дан массив с числами. Оставьте в нем только отрицательные числа. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 4:</span>  Дан массив с числами. Оставьте в нем только числа, которые больше нуля, но меньше 10. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 5:</span>  Дан массив со строками. Оставьте в нем только те строки, длина которых больше 5-ти символов. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 6:</span>  Дан массив с числами. Оставьте в нем только те числа, произведение которых на их порядковый номер меньше 30. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 7:</span>  Дан массив, в нем могут быть обычные элементы и подмассивы, например [1, 2, [3, 4], 5, [6, 7]]. Оставьте в нем только обычные элементы. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Метод every</h2>
+          <p>
+            Метод every проверяет элементы массива в соответствии с переданной функцией. Метод возвращает true, если для всех элементов массива переданная функция вернет true, в противном случае метод возвращает false. 
+          </p>
+          <p>
+            Синтаксис:
+            <br>
+            массив.every(function(элемент, индекс, массив) {
+              <br>
+              код
+              <br>
+              return true или false;
+              <br>
+            });
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 8:</span>  Дан массив с числами. Проверьте то, что все элементы в массиве больше нуля. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 9:</span>  Дан массив с числами. Проверьте то, что для всех элементов произведение их значений на их порядковый номер меньше 30. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./for_each.js"></script>

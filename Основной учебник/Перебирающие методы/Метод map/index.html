@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../normalize.css">
+  <link rel="stylesheet" href="../../Основы/Переменные/style.css">
+  <title>Перебирающие методы</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Метод map</h2>
+          <p>
+            Метод map позволяет применить заданную функцию для каждого элемента массива. При этом метод не изменяет исходный массив, а возвращает измененный. 
+            <br>
+            Метод в параметре получает функцию, которая выполнится для каждого элемента массива. То, что вернет эта функция через return для элемента массива, станет новым значением этого элемента.
+            <br>
+            В функцию можно передавать 3 параметра. Если эти параметры есть (они не обязательны), то в первый автоматически попадет элемент массива, во второй попадет его номер в массиве (индекс), а в третий - сам массив.  
+          </p>
+          <p>
+            let новый массив = массив.map(function(элемент, индекс, массив) {
+              <br>
+              код
+              <br>
+              return измененный элемент;
+              <br>
+            });
+          </p>
+          <div class="task-list">
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 1:</span>  Дан массив со строками. Используя метод map в конец значению каждого элемента массива добавьте символ '!'. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 2:</span>  Дан массив со строками. Используя метод map переверните символы каждой строки в обратном порядке. 
+              </p>
+            </div>
+            <div class="task-block">
+              <p class="task">
+                <span class="warning">Задача 3:</span>  Дан следующий массив: let arr = ['123', '456', '789']; Используя метод map преобразуйте этот массив в следующий: let arr = [
+                [1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]
+              ];
+              </p>
+            </div>
+          </div>
+          <h2>Ключ элемента</h2>
+          <p>
+            Функция-коллбэк может также принимать второй параметр - в него JavaScript разместит ключ элемента массива. 
+          </p>
+          <p>
+            let arr = ['a', 'b', 'c', 'd', 'e'];
+            <br><br>
+            let result = arr.map(function(elem, index) {
+              <br>
+            	return elem + index;
+              <br>
+            });
+            <br><br>
+            console.log(result); // выведет ['a0', 'b1', 'c2', 'd3', 'e4']
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 4:</span>  Дан массив с числами. Используя метод map запишите в каждый элемент массива значение этого элемента, умноженное на его порядковый номер в массиве. 
+            </p>
+          </div>
+          <h2>Перебор многомерных массивов</h2>
+          <p>
+            Метод map можно использовать и для перебора многомерных массивов. Пусть, к примеру, дан вот такой массив: 
+            <br><br>
+            let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+          </p>
+          <p>
+            let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+            <br><br>
+            let result = arr.map(function(elem) {
+              <br>
+            	return elem.map(function(num) {
+                <br>
+            		return num * num;
+                <br>
+            	});
+              <br>
+            });
+            <br><br>
+            console.log(result);
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./map.js"></script>
