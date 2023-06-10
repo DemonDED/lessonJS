@@ -56,3 +56,15 @@ let res2 = arr.every((elem, index) => {
   return elem * index < 30;
 });
 console.log(res2);
+
+let res3 = arr.some((elem) => {
+  return elem > 0;
+});
+
+console.log(res3);
+
+let res4 = arr.some((elem, index) => {
+  return elem * index > 30;
+});
+
+console.log(res4);

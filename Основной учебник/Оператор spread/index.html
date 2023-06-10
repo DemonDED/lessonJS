@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../normalize.css">
+  <link rel="stylesheet" href="../Основы/Переменные/style.css">
+  <title>Оператор spread</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="../../assets/logoJS.png" alt="JS" id="logo">
+      <h1>Основной учебник</h1>
+    </header>
+    <main id="main">
+      <div id="content">
+        <div>
+          <h2>Введение</h2>
+          <p>
+            В ES6 появился специальный оператор ..., называющийся spread. 
+            <br>
+            Когда оператор spread стоит перед массивом, он разделяет этот массив на отдельные значения, превращая массив в набор параметров, необходимых для вызова функции. 
+          </p>
+          <p>
+            Без оператора:
+            <br>
+            let arr = [1, 2, 3];
+            <br>
+            func(arr[0], arr[1], arr[2]);
+            <br>
+            С оператором:
+            <br>
+            let arr = [1, 2, 3];
+            <br>
+            func(...arr);
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 1:</span>  Дан массив: let arr = [1, 2, 3, 4, 5]; Дана также функция: 
+              <br><br>
+              function func(num1, num2, num3, num4, num5) {
+                <br>
+                return num1 + num2 + num3 + num4 + num5;
+                <br>
+              }
+              <br>
+              Найдите с помощью приведенной функции сумму элементов массива. 
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Использование spread</h2>
+          <p>
+            Пусть у нас есть вот такая функция с 5-тью параметрами: 
+            <br><br>
+            function func(num1, num2, num3, num4, num5) {
+              <br>
+              return num1 + num2 + num3 + num4 + num5;
+              <br>
+            }
+          </p>
+          <p>
+            Мы можем с помощью spread передать в эту функцию один массив: 
+            <br>
+            func(...[1, 2, 3, 4, 5]);
+            <br>
+            Но это не обязательно! Можно передать два массива:
+            <br>
+            func(...[1, 2], ...[3, 4, 5]);
+            <br>
+            Можно передать часть параметров обычным способом, а часть - с помощью spread
+          </p>
+          <div class="task-block">
+            <p class="task">
+              <span class="warning">Задача 2:</span>  Не запуская код, определите, что выведется в консоль: 
+              <br>
+              function func(n1, n2, n3, n4, n5, n6, n7, n8) {
+                <br>
+                return (n1 + n2 + n3 + n4) * (n5 + n6 + n7 + n8);
+                <br>
+              }
+              <br>
+              console.log( func(1, ...[2, 3, 4], 5, ...[6], ...[7, 8]) );
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2>Экстремальные значения массива через spread</h2>
+          <p></p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="../basic_js_book.html">К основному учебнику</a>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./spread.js"></script>
