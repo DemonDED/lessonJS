@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../normalize.css">
+    <link rel="stylesheet" href="../Основы/Переменные/style.css">
+    <title>Оператор rest</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="../../assets/logoJS.png" alt="JS" id="logo">
+            <h1>Основной учебник</h1>
+        </header>
+        <main id="main">
+            <div id="content">
+                <div>
+                    <h2>Введение</h2>
+                    <p>
+                        На самом деле этот оператор в зависимости от места в коде может называться либо оператором spread, либо оператором rest. 
+                    </p>
+                    <p>
+                        Как вы уже знаете, когда оператор spread стоит перед массивом или строкой, он разделяет их на отдельные значения. Оператор rest, хотя и имеет такой же синтаксис в виде ..., но предназначен для другого. 
+                    </p>
+                    <p>
+                        Вы должны уже знать, что если в функцию передать лишние параметры, это не приведет к ошибке: 
+                        <br>
+                        Оператор rest позволяет получить все лишние параметры в виде массива. Для этого в функцию добавляется еще один параметр (обязательно последним), перед которым пишутся 3 точки: 
+                        <br>
+                        function func(a, b, ...rest) {}
+                    </p>
+                    <p>
+                        Эти три точки и есть оператор rest, а имя переменной может иметь любое название, но обычно также принято называть его rest. 
+                    </p>
+                </div>
+                <div>
+                    <h2>Функция, находящая сумму чисел с помощью операторов rest и spread</h2>
+                    <p>
+                        Давайте напишем функцию, которая будет принимать параметрами произвольное количество чисел и возвращать их сумму. 
+                        <br>
+                        function func(...nums) {
+                            <br>
+                            let sum = 0;
+                            <br><br>
+                            for (let num of nums) {
+                                <br>
+                                sum += num;
+                                <br>
+                            }
+                            <br><br>
+                            return sum;
+                            <br>
+                        }
+                        <br></br>
+                        let result = func(1, 2, 3);
+                        <br>
+                        console.log(result); // выведет 6
+                    </p>
+                    <div class="task-block">
+                        <p class="task">
+                            <span class="warning">Задача 1:</span> Напишите функцию, которая будет принимать параметрами произвольное количество чисел и возвращать их среднее арифметическое. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <a href="../basic_js_book.html">К основному учебнику</a>
+        </footer>
+    </div>
+</body>
+</html>
+
+<script src="./rest.js"></script>
